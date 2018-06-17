@@ -17,7 +17,7 @@
 	<generator>http://wordpress.org/?v=2.2.1</generator>
 	<language>en</language>
 			<item>
-		<title>RSS Books</title>
+		<title><foo><result>&ac;</result></foo></title>
 		<link>http://rssblog.whatisrss.com/rss-books/</link>
 		<comments>http://rssblog.whatisrss.com/rss-books/#comments</comments>
 		<pubDate>Sat, 31 Jul 2010 19:35:36 +0000</pubDate>
