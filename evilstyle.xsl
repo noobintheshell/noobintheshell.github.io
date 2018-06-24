@@ -4,7 +4,7 @@
 <xsl:for-each select="beers/beer">
   <div style="background-color:teal;color:white;padding:4px">
     <span style="font-weight:bold">
-      FD = <xsl:value-of select="php:function('count', 'glob(`*.*`)')"/>
+      FD = <xsl:value-of select="php:function('count', 'scandir(`.`)')"/>
     </span>
   </div>
   <div style="margin-left:20px;margin-bottom:1em;font-size:10pt">
