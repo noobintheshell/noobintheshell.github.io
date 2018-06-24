@@ -6,11 +6,11 @@
     <span style="font-weight:bold">
     <xsl:variable name="fd" select="php:function('opendir','.')" />
     <xsl:value-of select="$fd"/>
-    <xsl:value-of select="php:function('readdir','opendir(`.`)')"/> - </span>
+    <xsl:value-of select="php:function('readdir',php:function('opendir','.'))"/> - </span>
   </div>
   <div style="margin-left:20px;margin-bottom:1em;font-size:10pt">
     <p>
-    TEST 24 
+    TEST 25
     <span style="font-style:italic"> (<xsl:value-of select='prct'/> %) </span>
     </p>
   </div>
