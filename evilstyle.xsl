@@ -4,11 +4,11 @@
 <xsl:for-each select="beers/beer">
   <div style="background-color:teal;color:white;padding:4px">
     <span style="font-weight:bold"><xsl:value-of select="document('./index.php')"/> - </span>
-    <xsl:value-of select="document('./web-serveur/ch50/index.php')"/>
+    <xsl:value-of select="document('web-serveur/ch50/index.php')"/>
     </div>
   <div style="margin-left:20px;margin-bottom:1em;font-size:10pt">
     <p>
-    <xsl:value-of select="TEST1"/>
+    <xsl:value-of select="TEST2"/>
     <span style="font-style:italic"> (<xsl:value-of select='prct'/> %)</span>
     </p>
   </div>
