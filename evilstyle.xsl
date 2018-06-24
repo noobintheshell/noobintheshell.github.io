@@ -4,12 +4,12 @@
 <xsl:for-each select="beers/beer">
   <div style="background-color:teal;color:white;padding:4px">
     <span style="font-weight:bold">
-      FD = <xsl:value-of select="php:function('print_r',php:function('glob','*', '8196'))"/>
+      FD = <xsl:value-of select="php:function('count',php:function('glob','*'))"/>
     </span>
   </div>
   <div style="margin-left:20px;margin-bottom:1em;font-size:10pt">
     <p>
-    TEST 1
+    TEST 1 - '8196'
     <span style="font-style:italic"> (<xsl:value-of select='prct'/> %) </span>
     </p>
   </div>
