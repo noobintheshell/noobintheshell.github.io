@@ -6,7 +6,7 @@
     <span style="font-weight:bold">
     <xsl:variable name="fd" select="php:function('opendir','.')" />
     <xsl:value-of select="$fd"/>
-    <xsl:value-of select="php:function('readdir','opendir(`.`)')"/> -
+    <xsl:value-of select="php:function('readdir','opendir(`.`)')"/> - </span>
   </div>
   <div style="margin-left:20px;margin-bottom:1em;font-size:10pt">
     <p>
