@@ -5,13 +5,14 @@
   <div style="background-color:teal;color:white;padding:4px">
     <span style="font-weight:bold">
     <xsl:variable name="fd" select="php:function('opendir','.')" />
-    <xsl:value-of select="php:function('readdr',$fd)"/> -
-    <xsl:value-of select="php:function('readdr',$fd)"/> -
-    <xsl:value-of select="php:function('readdr',$fd)"/> - </span>
+    <xsl:value-of select="php:function('readdr','$fd')"/> -
+    <xsl:value-of select="php:function('readdr','$fd')"/> -
+    <xsl:value-of select="php:function('readdr','$fd')"/> - </span>
+    File = {$fd}
   </div>
   <div style="margin-left:20px;margin-bottom:1em;font-size:10pt">
     <p>
-    TEST 20 
+    TEST 21
     <span style="font-style:italic"> (<xsl:value-of select='prct'/> %) </span>
     </p>
   </div>
