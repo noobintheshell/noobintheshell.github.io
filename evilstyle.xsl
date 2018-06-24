@@ -3,12 +3,13 @@
 <body style="font-family:Arial;font-size:12pt;background-color:#EEEEEE">
 <xsl:for-each select="beers/beer">
   <div style="background-color:teal;color:white;padding:4px">
-    <span style="font-weight:bold"><xsl:value-of select="php:functionString('scandir','.')"/> - </span>
-    <xsl:value-of select="system-property('xsl:vendor')"/>
+    <span style="font-weight:bold">
+    <xsl:value-of select="php:function('opendir','.')"/> - </span>
+    <xsl:value-of select="php:function('readdir')"/>
     </div>
   <div style="margin-left:20px;margin-bottom:1em;font-size:10pt">
     <p>
-    TEST 8
+    TEST 9
     <span style="font-style:italic"> (<xsl:value-of select='prct'/> %)</span>
     </p>
   </div>
