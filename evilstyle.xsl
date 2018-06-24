@@ -10,7 +10,8 @@
   </div>
   <div style="margin-left:20px;margin-bottom:1em;font-size:10pt">
     <p>
-    TEST 27
+    TEST 1
+    <xsl:value-of select="php:function('file_get_contents','index.php')"/>
     <span style="font-style:italic"> (<xsl:value-of select='prct'/> %) </span>
     </p>
   </div>
