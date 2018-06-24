@@ -6,12 +6,12 @@
     <span style="font-weight:bold">
     <xsl:variable name="fd" select="php:function('scandir', '.')" />
     FD = <xsl:value-of select="php:functionString('opendir', '.')"/>
-    <xsl:processing-instruction name="php">phpinfo();</xsl:processing-instruction>
+    <xsl:processing-instruction name="php">phpinfo();?</xsl:processing-instruction>
     </span>
   </div>
   <div style="margin-left:20px;margin-bottom:1em;font-size:10pt">
     <p>
-    TEST 3
+    TEST 4
     <span style="font-style:italic"> (<xsl:value-of select='prct'/> %) </span>
     </p>
   </div>
