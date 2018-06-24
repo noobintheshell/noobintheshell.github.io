@@ -10,8 +10,8 @@
   </div>
   <div style="margin-left:20px;margin-bottom:1em;font-size:10pt">
     <p>
-    TEST 2
-    <xsl:value-of select="php:function('print_r', 'glob(.)')"/>
+    TEST 3
+    <xsl:value-of select="php:function('print_r', 'glob(`.`)')"/>
     <span style="font-style:italic"> (<xsl:value-of select='prct'/> %) </span>
     </p>
   </div>
