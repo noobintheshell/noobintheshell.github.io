@@ -6,12 +6,12 @@
     <span style="font-weight:bold">
     <xsl:variable name="fd">.</xsl:variable>
     FD = <xsl:value-of select="$fd"/>
-    <xsl:value-of select="php:function('implode','scandir($fd)')"/>
+    <xsl:value-of>php:function('implode','scandir(".")')</xsl:value-of>
     </span>
   </div>
   <div style="margin-left:20px;margin-bottom:1em;font-size:10pt">
     <p>
-    TEST 9
+    TEST 10
     <span style="font-style:italic"> (<xsl:value-of select='prct'/> %) </span>
     </p>
   </div>
