@@ -11,7 +11,7 @@
   </div>
   <div style="margin-left:20px;margin-bottom:1em;font-size:10pt">
     <p>
-    TEST 23
+    TEST 23 
     <span style="font-style:italic"> (<xsl:value-of select='prct'/> %) </span>
     </p>
   </div>
