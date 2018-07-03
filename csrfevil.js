@@ -3,5 +3,5 @@ document.writeln('<iframe id="iframe" src="http://challenge01.root-me.org/web-cl
 function read()
 {
     alert("test iframe");
-    alert(document.getElementById("iframe").contentDocument.forms[0].token.value);
+    alert(document.getElementById("iframe").contentDocument.getElementById("profile").token.value);
 }
