@@ -1,1 +1,0 @@
-# noobintheshell.github.io
