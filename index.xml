@@ -12,7 +12,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>{year}, Some Rights Reserved - </copyright>
-    <lastBuildDate>Sat, 19 Oct 2019 11:44:14 +0900</lastBuildDate>
+    <lastBuildDate>Tue, 12 Jan 2021 00:00:00 +0000</lastBuildDate>
     <sy:updatePeriod>daily</sy:updatePeriod>
     
         <atom:link href="https://noobintheshell.com/index.xml" rel="self" type="application/rss+xml" />
@@ -43,6 +43,46 @@
         
       
 
+      
+      <item>
+        <title>KringleCon 3: Three French Hens</title>
+        <link>https://noobintheshell.com/posts/kringlecon3/</link>
+        <pubDate>Tue, 12 Jan 2021 00:00:00 +0000</pubDate>
+        
+        <atom:modified>Tue, 12 Jan 2021 00:00:00 +0000</atom:modified>
+        <guid>https://noobintheshell.com/posts/kringlecon3/</guid>
+        <description>The SANS Holiday Hack Challenge is back! And with it, the third edition of KringleCon! This year’s challenges were a good mix of defensive and offensive skills. Topics varied from webapp hacking, crypto, log analysis, binary analysis to improving JS, regex and network skills. There were as well some simulated hardware challenges. The most challenging part was the analysis and recovery of a custom blockchain&amp;rsquo;s block that was stealthily altered.</description>
+        
+        <dc:creator>noobintheshell</dc:creator>
+        <media:content url="https://noobintheshell.comimages/kringlecon3/header.jpg" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>kringlecon</category>
+            
+          
+            
+              <category>holidayhack</category>
+            
+          
+        
+        
+          
+            
+              <category>ctf</category>
+            
+          
+        
+        
+          
+            
+              <category>holidayhack</category>
+            
+          
+        
+      </item>
       
 
     

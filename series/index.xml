@@ -12,6 +12,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>{year}, Some Rights Reserved - </copyright>
+    <lastBuildDate>Tue, 12 Jan 2021 00:00:00 +0000</lastBuildDate>
     <sy:updatePeriod>daily</sy:updatePeriod>
     
         <atom:link href="https://noobintheshell.com/series/index.xml" rel="self" type="application/rss+xml" />
@@ -19,6 +20,24 @@
     
     
 
+      
+      <item>
+        <title>holidayhack</title>
+        <link>https://noobintheshell.com/series/holidayhack/</link>
+        <pubDate>Tue, 12 Jan 2021 00:00:00 +0000</pubDate>
+        
+        
+        <guid>https://noobintheshell.com/series/holidayhack/</guid>
+        <description></description>
+        
+        
+        
+        
+        
+        
+        
+        
+      </item>
       
 
     
