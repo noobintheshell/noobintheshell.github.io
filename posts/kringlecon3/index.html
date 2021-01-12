@@ -2338,7 +2338,7 @@ Gosh, there&rsquo;s some really great talks. I&rsquo;m getting all kinds of idea
     </figcaption>
   
 </figure>
-<p>We find the <em>Proxmark3</em> device that <strong>Bushy</strong> was mentioning on the floor of the <em>Wrapping Room</em>. This should help in opening the door protected by a <em>HID</em> lock:</p>
+<p>We find the <em>Proxmark3</em> device that <strong>Bushy</strong> was mentioning on the floor of the <em>Wrapping Room</em>. This should help in opening the door protected by an <em>HID</em> lock:</p>
 <figure >
   
   
@@ -2559,14 +2559,14 @@ Hello <strong>Santa</strong>. It&rsquo;s you again. Thank you so much for hostin
 <div class="alert alert-info" role="alert" data-dir="ltr"><p><strong>Angel Candysalt:</strong><br />
 You know, every day or so, I see <strong>Santa</strong> looking at his portrait in the entry and then letting out a maniacal &ldquo;Bwahahaha.&rdquo;<br />
 It&rsquo;s kind of disturbing and I&rsquo;m worried about him.</p>
-<p>Oh, this machine here? Oh, it&rsquo;s nothing you&rsquo;ll be able to use. You know, we have pretty tight controls on authentication for that infrastructure. There&rsquo;s some biometrics, so only <strong>Santa</strong> and a handful of elves can login.</p>
+<p>Oh, this machine here? Oh, it&rsquo;s nothing you&rsquo;ll be able to use. You know, we have pretty tight controls on authentication for that infrastructure. There&rsquo;s some biometrics, so only <strong>Santa</strong> and a handful of elves can log in.</p>
 </div>
 <p>When we try to access the terminal we get the message:</p>
 <div class="box">The <em>Splunk</em> terminal is for <strong>Santa</strong> and select <em>SOC</em> elves only.</div>
-<p>This is were <strong>Santa</strong>&rsquo;s impersonation comes in. Let&rsquo;s come back as <strong>Santa</strong>:</p>
+<p>This is where <strong>Santa</strong>&rsquo;s impersonation comes in. Let&rsquo;s come back as <strong>Santa</strong>:</p>
 <div class="alert alert-info" role="alert" data-dir="ltr"><strong>Angel Candysalt:</strong><br />
 Hey <strong>Santa</strong>, there&rsquo;s some crazy stuff going on that we can see through our <em>Splunk</em> infrastructure. You better login and see what&rsquo;s up.</div>
-<p>Like in last year edition, we access an instance of <em>Splunk Enterprise</em> where we have to answer some training questions that will lead us to the <em>Objective</em> one: &ldquo;What is the name of the adversary group that <strong>Santa</strong> feared would attack <em>KringleCon</em>?&rdquo;. We get as well some help from <strong>Santa</strong>&rsquo;s <em>SOC</em> team through a chat:</p>
+<p>Like in last year&rsquo;s edition, we access an instance of <em>Splunk Enterprise</em> where we have to answer some training questions that will lead us to finally answer the <em>Objective</em> question: &ldquo;What is the name of the adversary group that <strong>Santa</strong> feared would attack <em>KringleCon</em>?&rdquo;. We get as well some help from <strong>Santa</strong>&rsquo;s <em>SOC</em> team through a chat:</p>
 <figure >
   
   
@@ -2918,7 +2918,7 @@ Hey <strong>Santa</strong>, there&rsquo;s some crazy stuff going on that we can 
 </figure>
 <p>This one does not seem related to <em>Splunk</em>. We need to decrypt <strong>Alice</strong>&rsquo;s ciphertext. What we know from the hints is:</p>
 <ul>
-<li>the cipher text is encoded in <em>Base64</em> to be &ldquo;readable&rdquo;,</li>
+<li>the ciphertext is encoded in <em>Base64</em> to be &ldquo;readable&rdquo;,</li>
 <li>the algorithm used may be <em>RC4</em> (<a href="https://tools.ietf.org/html/rfc7465">RFC 7465</a>),</li>
 <li>the key can be found in <em>KringleCon 3</em> <a href="https://www.youtube.com/watch?v=RxVgEFt08kU">Splunk&rsquo;s talk</a> and is <strong>Santa</strong>&rsquo;s fav phrase.</li>
 </ul>
@@ -3068,10 +3068,10 @@ Hey <strong>Santa</strong>! Those tweaks you made to the sled just don&rsquo;t s
     </figcaption>
   
 </figure>
-<p>Clicking the <code>START</code> button triggers the message <code>02A#00FF00</code> but the sleigh does not accelerate. The <code>STOP</code> button triggers <code>02A#0000FF</code>. Like in the <a href="#5---can-bus-investigation">CAN-Bus Investigation</a> challenge, the <code>LOCK</code> and <code>UNLOCK</code> button triggers respectively <code>19B#000000000000</code> and <code>19B#0000F0000000</code>. Moving the <code>Accelerator</code>, <code>Brake</code> and <code>Steering</code> sliders does not seem to work. This means that they are probably using one of the <em>ID</em> we blocked.</p>
+<p>Clicking the <code>START</code> button triggers the message <code>02A#00FF00</code> but the sleigh does not accelerate. The <code>STOP</code> button triggers <code>02A#0000FF</code>. Like in the <a href="#5---can-bus-investigation">CAN-Bus Investigation</a> challenge, the <code>LOCK</code> and <code>UNLOCK</code> button triggers respectively <code>19B#000000000000</code> and <code>19B#0000F0000000</code>. Moving the <code>Accelerator</code>, <code>Brake</code> and <code>Steering</code> sliders do not seem to work. This means that they are probably using one of the <em>ID</em> we blocked.</p>
 <p>After a few tries, we see that the sleigh speed generates the <code>244</code> <em>ID</em>. As soon as we remove the blocking rule, we can again start properly and accelerate. Let&rsquo;s block only the noisy message <code>244#0000000000</code> instead. What we discover is that the message <code>244</code> data is the speed in hexadecimal. For instance, <code>244#00000003E8</code> indicates that the sleigh moves at 1000 <em>RPM</em> (<em>Reindeer Per Minute</em>).</p>
 <p>The <code>Stearing</code> uses the message <em>ID</em> <code>019</code> and does not seem to be flooded so we do not need to filter this message at all.</p>
-<p>The <code>Brake</code> uses the <code>080</code> message <em>ID</em>. Again, we can block the noisy value <code>080#000000</code>. However, when we start breaking, we see that 2 messages are sent each seconds. The valid one has the <code>Break</code> value as data in hexadecimal. The malicious ones have a data value lower than zero.</p>
+<p>The <code>Brake</code> uses the <code>080</code> message <em>ID</em>. Again, we can block the noisy value <code>080#000000</code>. However, when we start breaking, we see that 2 messages are sent each second. The valid one has the <code>Break</code> value as data in hexadecimal. The malicious ones have a data value lower than zero.</p>
 <p>This was not sufficient to make the sleigh work properly again. In the end, after a few other tries, we saw that all the data with zeros were legitimate. We are left with the doors and brake issues to solve. The necessary rules to exclude are:</p>
 <figure >
   
@@ -3337,8 +3337,8 @@ HOME=/home/app</div>
 </figure>
 <p>The <code>convert</code> binary is called with our filename as argument without being validated! We could potentially execute commands here if we had control over the filename. A file called <code>';ls #.png</code> would execute <code>ls</code> as follows:</p>
 <div class="box">convert -resize 800x600\&gt; -quality 75 &lsquo;';ls #.png &lsquo;/tmp/xxx&rsquo;</div>
-<p>Whatever is after the <code>#</code> will be seen as a comment. But, as we have seen previously, we do not have control on the filename here as the server renames it to a temporary filename after the upload.</p>
-<p>The <code>ZIP</code> file handler however, does not rename the files after extraction:</p>
+<p>Whatever is after the <code>#</code> will be seen as a comment. But, as we have seen previously, we do not have control over the filename here as the server renames it to a temporary filename after the upload.</p>
+<p>The <code>ZIP</code> file handler, however, does not rename the files after extraction:</p>
 <figure >
   
   
@@ -3542,7 +3542,7 @@ Hey <strong>Santa</strong>! You&rsquo;ve got to check out our <em>Scapy Present 
 <p>To achieve <em>ARP</em> spoofing, we can use the given script <code>/home/guest/scripts/arp_resp.py</code>. Almost everything is ready, we only need to replace the  <code>SOME*HERE</code> and <code>99999</code> values to match the protocol and then execute it:</p>
 <script type="application/javascript" src="https://gist.github.com/noobintheshell/091bc19bf705d2b5d01e73babe4ab9b5.js"></script>
 
-<p>We can have a look at <a href="https://www.cloudshark.org/captures/d97c5b81b057">this example</a> to help. Let&rsquo;s start with the line 14. The <em>Ethernet</em> source is our own one that we can get with <code>ifconfig</code> or we can simply re-use the <code>macaddr</code> variable:</p>
+<p>We can have a look at <a href="https://www.cloudshark.org/captures/d97c5b81b057">this example</a> to help. Let&rsquo;s start with line 14. The <em>Ethernet</em> source is our own one that we can get with <code>ifconfig</code> or we can simply re-use the <code>macaddr</code> variable:</p>
 <figure >
   
   
@@ -3565,7 +3565,7 @@ Hey <strong>Santa</strong>! You&rsquo;ve got to check out our <em>Scapy Present 
 <p>For the <em>Ethernet</em> destination, we need to capture the attacker packet with more details. This can be achieved by displaying the <code>ARP</code> table:</p>
 <div class="box">$ arp -a          <br />
 arp_requester.guestnet0.kringlecastle.com (10.6.6.35) at 4c:24:57:ab:ed:84 [ether] on eth0</div>
-<p>The line 14 becomes:</p>
+<p>Line 14 becomes:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt">14
@@ -3751,7 +3751,7 @@ $ mv work.deb suriv_amd64.deb</div>
 $ mv suriv_amd64.deb /tmp/pub/jfrost/backdoor<br />
 $ cd /tmp<br />
 $ python3 -m http.server 80</div>
-<p>From another terminal pane, we spawn a <em>Netcat</em> listener with <code>nc -lnvp 1234</code> and yet from the third terminal pane we launch our two spoofing scripts like we did before. After a few second, we have a hit:</p>
+<p>From another terminal pane, we spawn a <em>Netcat</em> listener with <code>nc -lnvp 1234</code> and yet from the third terminal pane, we launch our two spoofing scripts as we did before. After a few second, we have a hit:</p>
 <figure >
   
   
@@ -3816,7 +3816,7 @@ $ python3 -m http.server 80</div>
     </figcaption>
   
 </figure>
-<p>First of all, we need to activate the <em>Santa&rsquo;s Office</em> floor. This is now possible as we found the last bulb and items on the <em>Roof</em>. Here is one possible solution to hit the three sockets with the right colour:</p>
+<p>First of all, we need to activate the <em>Santa&rsquo;s Office</em> floor. This is now possible as we found the last bulb and items on the <em>Roof</em>. Here is one possible solution to hit the three sockets with the right color:</p>
 <figure >
   
   
@@ -3856,7 +3856,7 @@ $ python3 -m http.server 80</div>
     </figcaption>
   
 </figure>
-<p>Our avatar cannot access it though…but we can as <strong>Santa</strong>. However, the goal is to access <em>Santa&rsquo;s Office</em> without impersonating <strong>Santa</strong>. How to bypass that?</p>
+<p>Our avatar cannot access it…but we can as <strong>Santa</strong>. However, the goal is to access <em>Santa&rsquo;s Office</em> without impersonating <strong>Santa</strong>. How to bypass that?</p>
 <p>We can have a look at the <em>Javascript</em> code of the <em>Santavator</em> in <code>app.js</code>. By using the browser&rsquo;s <em>Developer Tools</em> (see <a href="https://www.lifewire.com/web-browser-developer-tools-3988965">this article</a>). We see that in order to access this floor we need 1) to power the button (what we just did) and 2) get the <code>besanta</code> token that we usually get when we impersonate <strong>Santa</strong>:</p>
 <figure >
   
@@ -4125,7 +4125,7 @@ GOSHGOLLY How did you get in here??</p>
     </figcaption>
   
 </figure>
-<p>So for a 64-bit numbers, it will generate two 32-bit numbers and concatenate them! This works for any bit size, if the size is not a multiple of 32, it just drops the least significant bits of the last random number to match the right size. Let&rsquo;s try it in an interpreter:</p>
+<p>So for 64-bit numbers, it will generate two 32-bit numbers and concatenate them! This works for any bit size, if the size is not a multiple of 32, it just drops the least significant bits of the last random number to match the right size. Let&rsquo;s try it in an interpreter:</p>
 <figure >
   
   
@@ -4272,7 +4272,7 @@ GOSHGOLLY How did you get in here??</p>
     </figcaption>
   
 </figure>
-<p>This is probably the block that <strong>Tinsel Upatree</strong> was mentioning. The block that has been tampered by <strong>Jack Frost</strong> to be the nicest person in the world!!</p>
+<p>This is probably the block that <strong>Tinsel Upatree</strong> was mentioning. The block that has been tampered with by <strong>Jack Frost</strong> to be the nicest person in the world!!</p>
 <div class="notices info" data-title="Note">
   Opening the <em>PDF</em> with <em>Adobe Reader</em> may not work as the file may be flagged as corrupted. It can be read, however, with browsers like <em>Chrome</em> or <em>Firefox</em>.
 </div>
@@ -4325,7 +4325,7 @@ GOSHGOLLY How did you get in here??</p>
 <li>we can choose the prefix and it can be of any size</li>
 <li>blocks are 64 bytes</li>
 <li>the prefix is part of the collision blocks</li>
-<li>given 2 binary blobs with same <em>MD5</em> hash, only 2 bytes are different. The first byte difference is +1 and the second byte difference is -1.</li>
+<li>given 2 binary blobs with the same <em>MD5</em> hash, only 2 bytes are different. The first byte difference is +1 and the second byte difference is -1.</li>
 <li>the first byte is the 10th byte of the last block containing the prefix</li>
 <li>the second byte is the 10th byte of the next block</li>
 </ul>
@@ -4410,7 +4410,7 @@ GOSHGOLLY How did you get in here??</p>
   
 </figure>
 <p>We got the first 2 bytes!</p>
-<p><strong>Jack Frost</strong> has as well tampered with the <em>PDF</em> file to show a fake report instead of the original one made by <strong>Shinny Upatree</strong>. He must have as well used some trick to get a <em>MD5</em> collision. Let&rsquo;s first have a look at the <em>PDF</em> file in a hex editor. We can use <a href="https://hexed.it/">HexEd.it</a>:</p>
+<p><strong>Jack Frost</strong> has as well tampered with the <em>PDF</em> file to show a fake report instead of the original one made by <strong>Shinny Upatree</strong>. He must have as well used some trick to get an <em>MD5</em> collision. Let&rsquo;s first have a look at the <em>PDF</em> file in a hex editor. We can use <a href="https://hexed.it/">HexEd.it</a>:</p>
 <figure >
   
   
@@ -4451,7 +4451,7 @@ GOSHGOLLY How did you get in here??</p>
     </figcaption>
   
 </figure>
-<p>This is the 3rd byte to change then! This looks again like <strong>Jack</strong> used a <em>UniColl</em> collision. The method to create such <em>PDF</em> is decribed <a href="https://github.com/corkami/collisions#pdf">here</a> and at <a href="https://speakerdeck.com/ange/colltris?slide=194">the end of the slide deck</a>. The structure of such a <em>PDF</em> looks like this:</p>
+<p>This is the 3rd byte to change then! This looks again like <strong>Jack</strong> used a <em>UniColl</em> collision. The method to create such <em>PDF</em> is described <a href="https://github.com/corkami/collisions#pdf">here</a> and at <a href="https://speakerdeck.com/ange/colltris?slide=194">the end of the slide deck</a>. The structure of such a <em>PDF</em> looks like this:</p>
 <figure >
   
   
@@ -4491,7 +4491,7 @@ GOSHGOLLY How did you get in here??</p>
     </figcaption>
   
 </figure>
-<p>Let&rsquo;s do those change and verify that the block&rsquo;s <em>MD5</em> does not change. Knowing that the second byte is at index <code>127</code> of the <em>PDF</em>, we can do the following:</p>
+<p>Let&rsquo;s do those changes and verify that the block&rsquo;s <em>MD5</em> does not change. Knowing that the second byte is at index <code>127</code> of the <em>PDF</em>, we can do the following:</p>
 <figure >
   
   
@@ -4597,7 +4597,7 @@ Ho Ho Ho!</p>
 My plan was NEARLY perfect… but I never expected someone with your skills to come around and ruin my plan for ruining the holidays!</p>
 <p>And now, they&rsquo;re gonna put me in jail for my deeds.</p>
 </div>
-<p>Finally <strong>Eve</strong> gives us access to some hidden swag!</p>
+<p>Finally, <strong>Eve</strong> gives us access to some hidden swag!</p>
 <div class="alert alert-info" role="alert" data-dir="ltr"><strong>Eve Snowshoes:</strong><br />
 What a fantabulous job! Congratulations!<br />
 You MUST let us know how you did it! Feel free to show off your skills with some swag - only for our victors!</div>
@@ -4715,7 +4715,7 @@ Hiya hiya - I&rsquo;m <strong>Shinny Upatree</strong>! Check out this cool <
     </figcaption>
   
 </figure>
-<p>The last menu is the only one that requires a user input and seems the best place to try an injection:</p>
+<p>The last menu is the only one that requires user input and seems the best place to try an injection:</p>
 <figure >
   
   
@@ -5107,11 +5107,11 @@ Ohai! <strong>Bushy Evergreen</strong>, just trying to get this door open.</p>
   <ul>
 <li>Strings in Binary Files - The strings command is common in Linux and available in Windows as part of SysInternals.</li>
 <li>Letting a Program Decrypt for You - While you have to use the lights program in <code>/home/elf/</code> to turn the lights on, you can delete parts in <code>/home/elf/lab/</code>.</li>
-<li>Lookup Table - For polyalphabetic ciphers, if you have control over inputs and visibilty of outputs, lookup tables can save the day.</li>
+<li>Lookup Table - For polyalphabetic ciphers, if you have control over inputs and visibility of outputs, lookup tables can save the day.</li>
 </ul>
 
 </div>
-<p><strong>Bushy</strong> wants us to help him open the door of the <em>Speaker Unpreparedness Room</em> which is password protected. The teminal welcomes us with this message:</p>
+<p><strong>Bushy</strong> wants us to help him open the door of the <em>Speaker Unpreparedness Room</em> which is password protected. The terminal welcomes us with this message:</p>
 <div class="box">Help us get into the Speaker Unpreparedness Room!<br />
 The door is controlled by <code>./door</code>, but it needs a password! If you can figure out the password, it&rsquo;ll open the door right up!<br />
 Oh, and if you have extra time, maybe you can turn on the lights with <code>./lights</code> activate the vending machines with <code>./vending-machines</code>? Those are a little trickier, they have configuration files, but it&rsquo;d help us a lot!<br />
@@ -5166,7 +5166,7 @@ name: elf-technician</div>
 <p>If we talk again to <strong>Bushy</strong>, he gives us some other hint:</p>
 <div class="alert alert-info" role="alert" data-dir="ltr"><p><strong>Bushy Evergreen:</strong><br />
 That&rsquo;s it! What a great password…</p>
-<p>Oh, this might be a good time to mention another lock in the castle. <strong>Santa</strong> asked me to ask you to evaluate the security of our new <em>HID</em> lock. If ever you find yourself in posession of a <em>Proxmark3</em>, click it in your badge to interact with it. It&rsquo;s a slick device that can read others' badges!</p>
+<p>Oh, this might be a good time to mention another lock in the castle. <strong>Santa</strong> asked me to ask you to evaluate the security of our new <em>HID</em> lock. If ever you find yourself in possession of a <em>Proxmark3</em>, click it in your badge to interact with it. It&rsquo;s a slick device that can read others' badges!</p>
 <p>Hey, you want to help me figure out the light switch too? Those come in handy sometimes. The password we need is in the <code>lights.conf</code> file, but it seems to be encrypted.<br />
 There&rsquo;s another instance of the program and configuration in <code>~/lab/</code> you can play around with. What if we set the user name to an encrypted value?</p>
 </div>
@@ -5201,7 +5201,7 @@ Wow - that worked? I mean, it worked! Hooray for opportunistic decryption, I
 Play around with <code>./vending_machines</code> in the <code>lab</code> folder.<br />
 You know what might be worth trying? Delete or rename the config file and run it. Then you could set the password yourself to <code>AAAAAAAA</code> or <code>BBBBBBBB</code>. If the encryption is simple code book or rotation ciphers, you&rsquo;ll be able to roll back the original password.</p>
 </div>
-<p>The <code>./vending_machines</code> binary asks as well for a password. The configuration file looks like:</p>
+<p>The <code>./vending_machines</code> binary asks as well for a password. The configuration file looks like this:</p>
 <div class="box">$ cat vending-machines.json<br />
 {<br />
 &ldquo;name&rdquo;: &ldquo;elf-maintenance&rdquo;,<br />
@@ -5232,7 +5232,7 @@ You know what might be worth trying? Delete or rename the config file and run it
 &ldquo;name&rdquo;: &ldquo;noob&rdquo;,<br />
 &ldquo;password&rdquo;: &ldquo;XiGRehmwXiGRehmwXiGR&rdquo;<br />
 }</div>
-<p>We see a pattern in the ciphertext. It looks like a polyalphabetic encryption with an 8 characters long key (the <code>A</code> is encrypted as <code>X</code> every 8 chars). For <code>BBBBBBBB</code> we get <code>DqTpKv7f</code>. If we do that for all the alphabet in use <code>[A-Za-z]</code>, we get the following lookup table:</p>
+<p>We see a pattern in the ciphertext. It looks like polyalphabetic encryption with a key long 8 characters (the <code>A</code> is encrypted as <code>X</code> every 8 chars). For <code>BBBBBBBB</code> we get <code>DqTpKv7f</code>. If we do that for all the alphabet in use <code>[A-Za-z]</code>, we get the following lookup table:</p>
 <figure >
   
   
@@ -5259,7 +5259,7 @@ Your lookup table worked - great job! That&rsquo;s one way to defeat a polya
 <p>And that <em>Proxmark</em> thing? Some people scan other people&rsquo;s badges and try those codes at locked doors. Other people scan one or two and just try to vary room numbers.<br />
 Do whatever works best for you!</p>
 </div>
-<p>We unlock the hints to complete the <a href="#5---open-hidlock">Objective 5</a>:</p>
+<p>We unlock the hints to complete <a href="#5---open-hidlock">Objective 5</a>:</p>
 <div class="notices success" data-title="Objective 5 hints">
   <ul>
 <li>What&rsquo;s a Proxmark? - The Proxmark is a multi-function RFID device, capable of capturing and replaying RFID events.</li>
@@ -5344,7 +5344,7 @@ Hiya hiya - I&rsquo;m <strong>Wunorse Openslae</strong>! I&rsquo;ve been pla
     </figcaption>
   
 </figure>
-<p>By watching <strong>Chris Elgee</strong>&rsquo;s <a href="https://www.youtube.com/watch?v=96u-uHRBI0I">talk</a>, we understand what a <em>CAN Bus</em> actually is. What we see in the last column of the dump is a <em>CAN</em> message that is composed by a <em>CAN ID</em> (3 chars) which represents a car component or action (i.e lock, brake, accelerate, etc.) followed by a data chunk that can indicate, for instance, if a lock opens/closes, or the value of the  acceleration/deceleration, etc. The <em>ID</em> and the data is separated by the delimiter <em>#</em>.</p>
+<p>By watching <strong>Chris Elgee</strong>&rsquo;s <a href="https://www.youtube.com/watch?v=96u-uHRBI0I">talk</a>, we understand what a <em>CAN Bus</em> actually is. What we see in the last column of the dump is a <em>CAN</em> message that is composed of a <em>CAN ID</em> (3 chars) which represents a car component or action (i.e lock, brake, accelerate, etc.) followed by a data chunk that can indicate, for instance, if a lock opens/closes, or the value of the  acceleration/deceleration, etc. The <em>ID</em> and the data are separated by the delimiter <em>#</em>.</p>
 <p>As per the instructions, we know that the door lock <em>CAN ID</em> must be present 3 times only, 2 <code>LOCK</code> and 1 <code>UNLOCK</code> message. Let&rsquo;s first count the number of unique <em>CAN ID</em>:</p>
 <div class="box">$ cat candump.log | awk &lsquo;{print substr($3, 0, 4)}&rsquo; | sort | uniq -c<br />
 35 188   <br />
@@ -5459,7 +5459,7 @@ curl http://localhost/maintenance.php?cmd=mget,example1</div>
     </figcaption>
   
 </figure>
-<p>As explained by <strong>Holly</strong>,  we may exploit an <em>RCE</em> vulnerability in <em>Redis</em>. We can follow <a href="https://book.hacktricks.xyz/pentesting/6379-pentesting-redis#redis-rce">this procedure</a> to write a <em>PHP</em> file in the web files and execute system calls. Spaces in commands must be replaces by commas. </p>
+<p>As explained by <strong>Holly</strong>,  we may exploit an <em>RCE</em> vulnerability in <em>Redis</em>. We can follow <a href="https://book.hacktricks.xyz/pentesting/6379-pentesting-redis#redis-rce">this procedure</a> to write a <em>PHP</em> file in the web files and execute system calls. Spaces in commands must be replaced by commas. </p>
 <p>In our case, the web files are located in <code>/var/www/html</code>, so to change <em>Redis</em> working directory, we have to execute:</p>
 <figure >
   
@@ -5719,7 +5719,7 @@ Congratulations, all pretty present packets properly prepared for processing!</d
 <p>We can easily escape the <em>Python</em> interpreter by running:</p>
 <div class="box">&gt;&gt;&gt; import os<br />
 &gt;&gt;&gt; os.system('/bin/bash')</div>
-<p>We talk again to <strong>Alabaster</strong> so that he gives us some hints to complete the <a href="#9---arp-shenanigans">Objective 9</a>:</p>
+<p>We talk again to <strong>Alabaster</strong> so that he gives us some hints to complete <a href="#9---arp-shenanigans">Objective 9</a>:</p>
 <div class="alert alert-info" role="alert" data-dir="ltr"><p><strong>Alabaster Snowball:</strong><br />
 Great job! Thanks! Those skills might be useful to you later on!</p>
 <p>I&rsquo;ve been trying those skills out myself on this other terminal. I&rsquo;m pretty sure I can use <code>tcpdump</code> to sniff some packets. Then I&rsquo;m going to try a machine-in-the-middle attack.</p>
@@ -5768,7 +5768,7 @@ Once completed, <strong>Fitzy</strong> says:</p>
 <div class="alert alert-info" role="alert" data-dir="ltr"><strong>Fitzy Shortstack:</strong><br />
 탢ݵרOُ񆨶$Ԩ؉楌Բ ahem! We did it! Thank you!!<br />
 Anytime you feel like changing the color scheme up, just pick up the phone! You know, Santa really seems to trust <strong>Shinny Upatree</strong>…</div>
-<p>If we do it a few more time, we cah change the color scheme of the <em>Christmas</em> tree behind.</p>
+<p>If we do it a few more times, we can change the color scheme of the <em>Christmas</em> tree behind.</p>
 <h3 id="the-sort-o-matic">The Sort-O-Matic</h3>
 <hr />
 <div class="box">[ELF] <strong>Minty Candycane</strong> [LOCATION] <em>Workshop</em></div>
@@ -5917,7 +5917,7 @@ Great job! You make this look easy!</p>
 <div class="notices success" data-title="Objective 6 hints">
   <ul>
 <li>Adversary Emulation and Splunk - Dave Herrald talks about emulating advanced adversaries and <a href="https://www.youtube.com/watch?v=RxVgEFt08kU">hunting them with Splunk</a>.</li>
-<li>Data Decoding and Investigation - Defenders often need to manipulate data to decRypt, deCode, and refourm it into something that is useful. <a href="https://gchq.github.io/CyberChef/">Cyber Chef</a> is extremely useful here!</li>
+<li>Data Decoding and Investigation - Defenders often need to manipulate data to decRypt, deCode, and reform it into something that is useful. <a href="https://gchq.github.io/CyberChef/">Cyber Chef</a> is extremely useful here!</li>
 </ul>
 
 </div>
@@ -6132,7 +6132,7 @@ Hello - my name is <strong>Ribb Bonbowford</strong>. Nice to meet you!</p>
     </figcaption>
   
 </figure>
-<p>Here, we can loop 5 times, by alterning up and down directions, to guide the elf through the labyrinth:</p>
+<p>Here, we can loop 5 times, by alternating up and down directions, to guide the elf through the labyrinth:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt">1
@@ -6506,7 +6506,7 @@ Check out <strong>Tom Liston</strong>&rsquo;s talk for more info, if you need it
 </ul>
 
 </div>
-<p>We can as well directly access the game from <a href="https://snowball2.kringlecastle.com/">https://snowball2.kringlecastle.com/</a> which will be more convenient for analysis. The game is an equivalent of the <em>Battleship</em> board game, we need to throw snow balls and hit the hidden snow forts until we destroy all of them. There are 4 different difficulties.</p>
+<p>We can as well directly access the game from <a href="https://snowball2.kringlecastle.com/">https://snowball2.kringlecastle.com/</a> which will be more convenient for analysis. The game is an equivalent of the <em>Battleship</em> board game, we need to throw snowballs and hit the hidden snow forts until we destroy all of them. There are 4 different difficulties.</p>
 <figure >
   
   
@@ -6587,7 +6587,7 @@ In the <em>Easy</em> and <em>Medium</em> level, we can choose the <code>Player N
     </figcaption>
   
 </figure>
-<p>So if our understanding is correct, in <em>Easy</em> and <em>Medium</em> level we can choose what is the seed used to generate the board. This means that if we use always the same seed, the board will always be the same. And it appears that the seed used on these levels is the <code>Player Name</code>. For instance, for a <code>seed=noobintheshell</code> we get the following enemy board each time:</p>
+<p>So if our understanding is correct, in the <em>Easy</em> and <em>Medium</em> level we can choose what is the seed used to generate the board. This means that if we use always the same seed, the board will always be the same. And it appears that the seed used on these levels is the <code>Player Name</code>. For instance, for a <code>seed=noobintheshell</code> we get the following enemy board each time:</p>
 <figure >
   
   
@@ -6611,7 +6611,7 @@ In the <em>Easy</em> and <em>Medium</em> level, we can choose the <code>Player N
 <p><strong>Hard:</strong><br />
 In <em>Hard</em> mode, we can&rsquo;t choose the seed, however, we see it (our <code>Player Name</code>) when we start the game. So what we can do to beat this level is to run the game in <em>Easy</em> mode (in another tab) with the seed used in <em>Hard</em> mode. We will know where the snow castles are.</p>
 <p><strong>Impossible:</strong><br />
-In this level, we can&rsquo;t make any single mistake as the attacker is successful at each turn.</p>
+In this mode, we can&rsquo;t make any single mistake as the attacker is successful at each turn.</p>
 <p>Here, we do not get to know the <code>seed</code> used at all. However, we get to know from the game description that hundreds of random <code>seed</code> are generated before one is picked up. The tested ones are shown in the <em>HTML</em> code of the page:</p>
 <figure >
   
@@ -6634,7 +6634,7 @@ In this level, we can&rsquo;t make any single mistake as the attacker is success
 </figure>
 <p>As we know from the hints, the <em>Python</em> <code>random</code> function is used to generate those random numbers. This function uses the <em>Marsenne-Twister</em> algorithm for the <em>PRNG</em>. This algorithm has a known weakness: if we have enough consecutive random numbers, we can possibly predict the next ones. We can use the <code>marsene-twister-predictor</code> to achieve that. We can install it with:</p>
 <div class="box">$ pip3 install mersenne-twister-predictor</div>
-<p>Then we need to get the list of random number that we saw in the <em>HTML</em> code in a text file, one number per line. For the prediction to work, we need exactly the last 624 generated random numbers because <em>Marsene-Twister</em> uses a state table of 624 values. Then simply call the below command to get the next random number:</p>
+<p>Then we need to get the list of random numbers that we saw in the <em>HTML</em> code in a text file, one number per line. For the prediction to work, we need exactly the last 624 generated random numbers because <em>Marsene-Twister</em> uses a state table of 624 values. Then simply call the below command to get the next random number:</p>
 <div class="box">$ cat random_numbers.txt | mt19937predict | head -n 1<br />
 71766020</div>
 <p>Then, as for the <em>Hard</em> level, we can use this seed on the <em>Easy</em> level to get the castle placement and beat the <em>Impossible</em> level:</p>
@@ -6685,7 +6685,7 @@ Crikey - that&rsquo;s it! You&rsquo;ve done the <em>Impossible</em>! You&rsq
 
 </div>
 <h2 id="items">Items</h2>
-<p>Some items are spread around the <strong>Santa</strong>&rsquo;s castle. At the exeption of the <em>Proxmark3</em>, used to complete <a href="#objective-5---open-hidlock">Objective 5</a>, the items can only be used to operate the <em>Santavator</em>. Here is their location:</p>
+<p>Some items are spread around the <strong>Santa</strong>&rsquo;s castle. At the exception of the <em>Proxmark3</em>, used to complete <a href="#objective-5---open-hidlock">Objective 5</a>, the items can only be used to operate the <em>Santavator</em>. Here is their location:</p>
 <table>
 <thead>
 <tr>
@@ -6758,7 +6758,7 @@ Crikey - that&rsquo;s it! You&rsquo;ve done the <em>Impossible</em>! You&rsq
 </tbody>
 </table>
 <h2 id="christmas-eggs">Christmas Eggs</h2>
-<p>One of the quest I enjoy the most in the <em>Holiday Hack</em> challenges is to find as many hidden <em>Eggs</em> as possible! Here are the one I spotted this year:</p>
+<p>One of the quests I enjoy the most in the <em>Holiday Hack</em> challenges is to find as many hidden <em>Eggs</em> as possible! Here are the ones I spotted this year:</p>
 <table>
 <thead>
 <tr>
@@ -6769,7 +6769,7 @@ Crikey - that&rsquo;s it! You&rsquo;ve done the <em>Impossible</em>! You&rsq
 <tbody>
 <tr>
 <td>Challenge title</td>
-<td><em>Three French Hens</em> comes from the <a href="https://en.wikipedia.org/wiki/The_Twelve_Days_of_Christmas_(song)">The Twelve Days of Christmas</a> Christmas carol (the 3rd day of Christmas for the 3rd KringleCon)</td>
+<td><em>Three French Hens</em> comes from <a href="https://en.wikipedia.org/wiki/The_Twelve_Days_of_Christmas_(song)">The Twelve Days of Christmas</a> Christmas carol (the 3rd day of Christmas for the 3rd KringleCon)</td>
 </tr>
 <tr>
 <td>Castle Approach</td>
@@ -6777,7 +6777,7 @@ Crikey - that&rsquo;s it! You&rsquo;ve done the <em>Impossible</em>! You&rsq
 </tr>
 <tr>
 <td>Castle Approach</td>
-<td>one of the hen, <em>Jean-Claude</em>, says &ldquo;Jacques DuGivre!&rdquo; in French which translates to <strong>Jack Frost</strong>.</td>
+<td>one of the hens, <em>Jean-Claude</em>, says &ldquo;Jacques DuGivre!&rdquo; in French which translates to <strong>Jack Frost</strong>.</td>
 </tr>
 <tr>
 <td>Castle Entry</td>
@@ -6849,7 +6849,7 @@ Crikey - that&rsquo;s it! You&rsquo;ve done the <em>Impossible</em>! You&rsq
 </tr>
 <tr>
 <td>Soundtrack</td>
-<td>the song in the <em>???</em> room is a remix of I wish <a href="https://www.youtube.com/watch?v=eU1lyz1xADM">I Could Be Santa Claus</a> from <em>A Muppets Christmas</em></td>
+<td>the song in the <em>???</em> room is a remix of <a href="https://www.youtube.com/watch?v=eU1lyz1xADM">I Wish I Could Be Santa Claus</a> from <em>A Muppets Christmas</em></td>
 </tr>
 <tr>
 <td>Soundtrack</td>
