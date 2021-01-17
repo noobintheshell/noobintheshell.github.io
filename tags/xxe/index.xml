@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" 
+  xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+  xmlns:dc="http://purl.org/dc/elements/1.1/" 
+  xmlns:atom="http://www.w3.org/2005/Atom" 
+  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
+  xmlns:media="http://search.yahoo.com/mrss/">
+  <channel>
+    <title>xxe on noobintheshell blog</title>
+    <link>https://noobintheshell.com/tags/xxe/</link>
+    <description>Recent content in xxe on noobintheshell blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>{year}, Some Rights Reserved - </copyright>
+    <lastBuildDate>Sat, 04 Jul 2020 00:00:00 +0000</lastBuildDate>
+    <sy:updatePeriod>daily</sy:updatePeriod>
+    
+        <atom:link href="https://noobintheshell.com/tags/xxe/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+
+      
+      <item>
+        <title>Hack The Box :: ForwardSlash</title>
+        <link>https://noobintheshell.com/posts/htb_forwardslash/</link>
+        <pubDate>Sat, 04 Jul 2020 00:00:00 +0000</pubDate>
+        
+        <atom:modified>Sat, 04 Jul 2020 00:00:00 +0000</atom:modified>
+        <guid>https://noobintheshell.com/posts/htb_forwardslash/</guid>
+        <description>ForwardSlash is a Hard Linux box created by InfoSecJack and chivato. It was released on April 4th, 2020 and retired on July 4th, 2020. The users rated the difficulty 6.3/10 and gave an appreciation score of 3.8/5.
+ForwardSlash Info Card   TL;DR We access a website defaced by a hacker group. Checking for VHOSTs, we find a backup website with a login page. We can register and log in.</description>
+        
+        <dc:creator>noobintheshell</dc:creator>
+        <media:content url="https://noobintheshell.comimages/htb_forwardslash/header.jpg" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>lfi</category>
+            
+          
+            
+              <category>xxe</category>
+            
+          
+            
+              <category>xss</category>
+            
+          
+            
+              <category>luks</category>
+            
+          
+        
+        
+          
+            
+              <category>pentest</category>
+            
+          
+        
+        
+          
+            
+              <category>htb_box</category>
+            
+          
+        
+      </item>
+      
+
+    
+  </channel>
+</rss>

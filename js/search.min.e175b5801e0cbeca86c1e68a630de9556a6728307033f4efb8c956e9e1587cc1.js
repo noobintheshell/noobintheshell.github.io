@@ -13,6 +13,6 @@ this.field("content");this.field("tag");this.field("title");this.field("url");th
 searchInput.removeAttribute("disabled");searchInput.addEventListener("keyup",function(e){let searchString=e.target.value;if(searchString&&searchString.length>2){try{searchResults=searchIndex.search(searchString);}catch(err){if(err instanceof lunr.QueryParseError){return;}}}else{searchResults=[];}
 if(searchResults.length>0){searchResultElement.innerHTML=searchResults.map(function(match){let item=searchContent.find(function(e){return e.id==parseInt(match.ref);});return "<li>"+
 "<h4 title='field: title'>["+item.type+"] <a href='"+item.url+"'>"+mark(item.title,searchString)+"</a></h4>"+
-"<p class='tags' title='field: tag'><span>🏷️</span> "+tags(item.tag,searchString)+"</p>"+
+"<p class='tags' title='field: tag'><span>🏷️ &nbsp;</span> "+tags(item.tag,searchString)+"</p>"+
 "<p class='desc' title='field: desc'>"+mark(item.description,searchString)+"</p>"+
 "</li>";}).join("");}else{searchResultElement.innerHTML="<li><p class='no-result'>No results found</p></li>";}});}).catch(function(error){console.error(error);});});
