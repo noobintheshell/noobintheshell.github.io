@@ -6,9 +6,9 @@
   xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
   xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
-    <title>htb_box on noobintheshell blog</title>
+    <title>htb_box on noobintheshell :: blog</title>
     <link>https://noobintheshell.com/series/htb_box/</link>
-    <description>Recent content in htb_box on noobintheshell blog</description>
+    <description>Recent content in htb_box on noobintheshell :: blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>{year}, Some Rights Reserved - </copyright>
