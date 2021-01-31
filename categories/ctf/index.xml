@@ -31,7 +31,7 @@
         <description>The SANS Holiday Hack Challenge is back! And with it, the third edition of KringleCon! This year’s challenges were a good mix of defensive and offensive skills. Topics varied from webapp hacking, crypto, log analysis, binary analysis to improving JS, regex and network skills. There were as well some simulated hardware challenges. The most challenging part was the analysis and recovery of a custom blockchain&amp;rsquo;s block that was stealthily altered.</description>
         
         <dc:creator>noobintheshell</dc:creator>
-        <media:content url="https://noobintheshell.comimages/kringlecon3/header.jpg" medium="image"><media:title type="html">featured image</media:title></media:content>
+        <media:content url="https://noobintheshell.comimages/kringlecon3/header.webp" medium="image"><media:title type="html">featured image</media:title></media:content>
         
         
         

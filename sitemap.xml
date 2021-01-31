@@ -53,12 +53,12 @@
   </url>
   
   <url>
-    <loc>https://noobintheshell.com/tags/arbitraryfileread/</loc>
+    <loc>https://noobintheshell.com/tags/arbitrary_file_read/</loc>
     <lastmod>2020-07-11T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://noobintheshell.com/tags/dynamicpdf/</loc>
+    <loc>https://noobintheshell.com/tags/dynamic_pdf/</loc>
     <lastmod>2020-07-11T00:00:00+00:00</lastmod>
   </url>
   
@@ -83,12 +83,12 @@
   </url>
   
   <url>
-    <loc>https://noobintheshell.com/tags/racecondition/</loc>
+    <loc>https://noobintheshell.com/tags/race_condition/</loc>
     <lastmod>2020-07-11T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://noobintheshell.com/tags/serversidexss/</loc>
+    <loc>https://noobintheshell.com/tags/server-side_xss/</loc>
     <lastmod>2020-07-11T00:00:00+00:00</lastmod>
   </url>
   
@@ -115,6 +115,136 @@
   <url>
     <loc>https://noobintheshell.com/tags/xxe/</loc>
     <lastmod>2020-07-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://noobintheshell.com/tags/double_free/</loc>
+    <lastmod>2020-06-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://noobintheshell.com/tags/firmware_injection/</loc>
+    <lastmod>2020-06-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://noobintheshell.com/posts/htb_playertwo/</loc>
+    <lastmod>2020-06-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://noobintheshell.com/tags/heap/</loc>
+    <lastmod>2020-06-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://noobintheshell.com/tags/libc2.29/</loc>
+    <lastmod>2020-06-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://noobintheshell.com/tags/mosquitto/</loc>
+    <lastmod>2020-06-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://noobintheshell.com/tags/mqtt/</loc>
+    <lastmod>2020-06-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://noobintheshell.com/tags/null_byte_overflow/</loc>
+    <lastmod>2020-06-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://noobintheshell.com/tags/protobuf/</loc>
+    <lastmod>2020-06-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://noobintheshell.com/tags/pwn/</loc>
+    <lastmod>2020-06-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://noobintheshell.com/tags/tcache_poisoning/</loc>
+    <lastmod>2020-06-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://noobintheshell.com/tags/totp/</loc>
+    <lastmod>2020-06-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://noobintheshell.com/tags/triwp/</loc>
+    <lastmod>2020-06-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://noobintheshell.com/posts/htb_servmon/</loc>
+    <lastmod>2020-06-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://noobintheshell.com/tags/nsclient&#43;&#43;/</loc>
+    <lastmod>2020-06-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://noobintheshell.com/tags/nvms-1000/</loc>
+    <lastmod>2020-06-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://noobintheshell.com/tags/azure_ad_connect/</loc>
+    <lastmod>2020-06-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://noobintheshell.com/tags/default_password/</loc>
+    <lastmod>2020-06-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://noobintheshell.com/posts/htb_monteverde/</loc>
+    <lastmod>2020-06-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://noobintheshell.com/tags/ldap_anonymous_bind/</loc>
+    <lastmod>2020-06-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://noobintheshell.com/tags/ads/</loc>
+    <lastmod>2020-06-06T14:59:17+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://noobintheshell.com/tags/aes-cbc/</loc>
+    <lastmod>2020-06-06T14:59:17+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://noobintheshell.com/posts/htb_nest/</loc>
+    <lastmod>2020-06-06T14:59:17+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://noobintheshell.com/tags/pbkdf2/</loc>
+    <lastmod>2020-06-06T14:59:17+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://noobintheshell.com/tags/vb.net/</loc>
+    <lastmod>2020-06-06T14:59:17+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://noobintheshell.com/tags/xattr/</loc>
+    <lastmod>2020-06-06T14:59:17+00:00</lastmod>
   </url>
   
   <url>

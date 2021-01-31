@@ -32,21 +32,21 @@
 Book Info Card   TL;DR We access a virtual library where we can download, upload and comment books. The account registration flow contains a vulnerability that allows overwriting any user’s password. We overwrite the admin’s and to access the admin panel.</description>
         
         <dc:creator>noobintheshell</dc:creator>
-        <media:content url="https://noobintheshell.comimages/htb_book/header.jpg" medium="image"><media:title type="html">featured image</media:title></media:content>
+        <media:content url="https://noobintheshell.comimages/htb_book/header.webp" medium="image"><media:title type="html">featured image</media:title></media:content>
         
         
         
           
             
-              <category>arbitraryfileread</category>
+              <category>arbitrary_file_read</category>
             
           
             
-              <category>serversidexss</category>
+              <category>server-side_xss</category>
             
           
             
-              <category>dynamicpdf</category>
+              <category>dynamic_pdf</category>
             
           
             
@@ -54,7 +54,7 @@ Book Info Card   TL;DR We access a virtual library where we can download, upload
             
           
             
-              <category>racecondition</category>
+              <category>race_condition</category>
             
           
         

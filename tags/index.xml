@@ -58,12 +58,12 @@
       </item>
       
       <item>
-        <title>arbitraryfileread</title>
-        <link>https://noobintheshell.com/tags/arbitraryfileread/</link>
+        <title>arbitrary_file_read</title>
+        <link>https://noobintheshell.com/tags/arbitrary_file_read/</link>
         <pubDate>Sat, 11 Jul 2020 00:00:00 +0000</pubDate>
         
         
-        <guid>https://noobintheshell.com/tags/arbitraryfileread/</guid>
+        <guid>https://noobintheshell.com/tags/arbitrary_file_read/</guid>
         <description></description>
         
         
@@ -76,12 +76,12 @@
       </item>
       
       <item>
-        <title>dynamicpdf</title>
-        <link>https://noobintheshell.com/tags/dynamicpdf/</link>
+        <title>dynamic_pdf</title>
+        <link>https://noobintheshell.com/tags/dynamic_pdf/</link>
         <pubDate>Sat, 11 Jul 2020 00:00:00 +0000</pubDate>
         
         
-        <guid>https://noobintheshell.com/tags/dynamicpdf/</guid>
+        <guid>https://noobintheshell.com/tags/dynamic_pdf/</guid>
         <description></description>
         
         
@@ -112,12 +112,12 @@
       </item>
       
       <item>
-        <title>racecondition</title>
-        <link>https://noobintheshell.com/tags/racecondition/</link>
+        <title>race_condition</title>
+        <link>https://noobintheshell.com/tags/race_condition/</link>
         <pubDate>Sat, 11 Jul 2020 00:00:00 +0000</pubDate>
         
         
-        <guid>https://noobintheshell.com/tags/racecondition/</guid>
+        <guid>https://noobintheshell.com/tags/race_condition/</guid>
         <description></description>
         
         
@@ -130,12 +130,12 @@
       </item>
       
       <item>
-        <title>serversidexss</title>
-        <link>https://noobintheshell.com/tags/serversidexss/</link>
+        <title>server-side_xss</title>
+        <link>https://noobintheshell.com/tags/server-side_xss/</link>
         <pubDate>Sat, 11 Jul 2020 00:00:00 +0000</pubDate>
         
         
-        <guid>https://noobintheshell.com/tags/serversidexss/</guid>
+        <guid>https://noobintheshell.com/tags/server-side_xss/</guid>
         <description></description>
         
         
@@ -208,6 +208,402 @@
         
         
         <guid>https://noobintheshell.com/tags/xxe/</guid>
+        <description></description>
+        
+        
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>double_free</title>
+        <link>https://noobintheshell.com/tags/double_free/</link>
+        <pubDate>Sat, 27 Jun 2020 00:00:00 +0000</pubDate>
+        
+        
+        <guid>https://noobintheshell.com/tags/double_free/</guid>
+        <description></description>
+        
+        
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>firmware_injection</title>
+        <link>https://noobintheshell.com/tags/firmware_injection/</link>
+        <pubDate>Sat, 27 Jun 2020 00:00:00 +0000</pubDate>
+        
+        
+        <guid>https://noobintheshell.com/tags/firmware_injection/</guid>
+        <description></description>
+        
+        
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>heap</title>
+        <link>https://noobintheshell.com/tags/heap/</link>
+        <pubDate>Sat, 27 Jun 2020 00:00:00 +0000</pubDate>
+        
+        
+        <guid>https://noobintheshell.com/tags/heap/</guid>
+        <description></description>
+        
+        
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>libc2.29</title>
+        <link>https://noobintheshell.com/tags/libc2.29/</link>
+        <pubDate>Sat, 27 Jun 2020 00:00:00 +0000</pubDate>
+        
+        
+        <guid>https://noobintheshell.com/tags/libc2.29/</guid>
+        <description></description>
+        
+        
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>mosquitto</title>
+        <link>https://noobintheshell.com/tags/mosquitto/</link>
+        <pubDate>Sat, 27 Jun 2020 00:00:00 +0000</pubDate>
+        
+        
+        <guid>https://noobintheshell.com/tags/mosquitto/</guid>
+        <description></description>
+        
+        
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>mqtt</title>
+        <link>https://noobintheshell.com/tags/mqtt/</link>
+        <pubDate>Sat, 27 Jun 2020 00:00:00 +0000</pubDate>
+        
+        
+        <guid>https://noobintheshell.com/tags/mqtt/</guid>
+        <description></description>
+        
+        
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>null_byte_overflow</title>
+        <link>https://noobintheshell.com/tags/null_byte_overflow/</link>
+        <pubDate>Sat, 27 Jun 2020 00:00:00 +0000</pubDate>
+        
+        
+        <guid>https://noobintheshell.com/tags/null_byte_overflow/</guid>
+        <description></description>
+        
+        
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>protobuf</title>
+        <link>https://noobintheshell.com/tags/protobuf/</link>
+        <pubDate>Sat, 27 Jun 2020 00:00:00 +0000</pubDate>
+        
+        
+        <guid>https://noobintheshell.com/tags/protobuf/</guid>
+        <description></description>
+        
+        
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>pwn</title>
+        <link>https://noobintheshell.com/tags/pwn/</link>
+        <pubDate>Sat, 27 Jun 2020 00:00:00 +0000</pubDate>
+        
+        
+        <guid>https://noobintheshell.com/tags/pwn/</guid>
+        <description></description>
+        
+        
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>tcache_poisoning</title>
+        <link>https://noobintheshell.com/tags/tcache_poisoning/</link>
+        <pubDate>Sat, 27 Jun 2020 00:00:00 +0000</pubDate>
+        
+        
+        <guid>https://noobintheshell.com/tags/tcache_poisoning/</guid>
+        <description></description>
+        
+        
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>totp</title>
+        <link>https://noobintheshell.com/tags/totp/</link>
+        <pubDate>Sat, 27 Jun 2020 00:00:00 +0000</pubDate>
+        
+        
+        <guid>https://noobintheshell.com/tags/totp/</guid>
+        <description></description>
+        
+        
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>triwp</title>
+        <link>https://noobintheshell.com/tags/triwp/</link>
+        <pubDate>Sat, 27 Jun 2020 00:00:00 +0000</pubDate>
+        
+        
+        <guid>https://noobintheshell.com/tags/triwp/</guid>
+        <description></description>
+        
+        
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>nsclient&#43;&#43;</title>
+        <link>https://noobintheshell.com/tags/nsclient&#43;&#43;/</link>
+        <pubDate>Sat, 20 Jun 2020 00:00:00 +0000</pubDate>
+        
+        
+        <guid>https://noobintheshell.com/tags/nsclient&#43;&#43;/</guid>
+        <description></description>
+        
+        
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>nvms-1000</title>
+        <link>https://noobintheshell.com/tags/nvms-1000/</link>
+        <pubDate>Sat, 20 Jun 2020 00:00:00 +0000</pubDate>
+        
+        
+        <guid>https://noobintheshell.com/tags/nvms-1000/</guid>
+        <description></description>
+        
+        
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>azure_ad_connect</title>
+        <link>https://noobintheshell.com/tags/azure_ad_connect/</link>
+        <pubDate>Sat, 13 Jun 2020 00:00:00 +0000</pubDate>
+        
+        
+        <guid>https://noobintheshell.com/tags/azure_ad_connect/</guid>
+        <description></description>
+        
+        
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>default_password</title>
+        <link>https://noobintheshell.com/tags/default_password/</link>
+        <pubDate>Sat, 13 Jun 2020 00:00:00 +0000</pubDate>
+        
+        
+        <guid>https://noobintheshell.com/tags/default_password/</guid>
+        <description></description>
+        
+        
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>ldap_anonymous_bind</title>
+        <link>https://noobintheshell.com/tags/ldap_anonymous_bind/</link>
+        <pubDate>Sat, 13 Jun 2020 00:00:00 +0000</pubDate>
+        
+        
+        <guid>https://noobintheshell.com/tags/ldap_anonymous_bind/</guid>
+        <description></description>
+        
+        
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>ads</title>
+        <link>https://noobintheshell.com/tags/ads/</link>
+        <pubDate>Sat, 06 Jun 2020 14:59:17 +0000</pubDate>
+        
+        
+        <guid>https://noobintheshell.com/tags/ads/</guid>
+        <description></description>
+        
+        
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>aes-cbc</title>
+        <link>https://noobintheshell.com/tags/aes-cbc/</link>
+        <pubDate>Sat, 06 Jun 2020 14:59:17 +0000</pubDate>
+        
+        
+        <guid>https://noobintheshell.com/tags/aes-cbc/</guid>
+        <description></description>
+        
+        
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>pbkdf2</title>
+        <link>https://noobintheshell.com/tags/pbkdf2/</link>
+        <pubDate>Sat, 06 Jun 2020 14:59:17 +0000</pubDate>
+        
+        
+        <guid>https://noobintheshell.com/tags/pbkdf2/</guid>
+        <description></description>
+        
+        
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>vb.net</title>
+        <link>https://noobintheshell.com/tags/vb.net/</link>
+        <pubDate>Sat, 06 Jun 2020 14:59:17 +0000</pubDate>
+        
+        
+        <guid>https://noobintheshell.com/tags/vb.net/</guid>
+        <description></description>
+        
+        
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>xattr</title>
+        <link>https://noobintheshell.com/tags/xattr/</link>
+        <pubDate>Sat, 06 Jun 2020 14:59:17 +0000</pubDate>
+        
+        
+        <guid>https://noobintheshell.com/tags/xattr/</guid>
         <description></description>
         
         

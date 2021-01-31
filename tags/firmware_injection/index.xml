@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" 
+  xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+  xmlns:dc="http://purl.org/dc/elements/1.1/" 
+  xmlns:atom="http://www.w3.org/2005/Atom" 
+  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
+  xmlns:media="http://search.yahoo.com/mrss/">
+  <channel>
+    <title>firmware_injection on noobintheshell :: blog</title>
+    <link>https://noobintheshell.com/tags/firmware_injection/</link>
+    <description>Recent content in firmware_injection on noobintheshell :: blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>{year}, Some Rights Reserved - </copyright>
+    <lastBuildDate>Sat, 27 Jun 2020 00:00:00 +0000</lastBuildDate>
+    <sy:updatePeriod>daily</sy:updatePeriod>
+    
+        <atom:link href="https://noobintheshell.com/tags/firmware_injection/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+
+      
+      <item>
+        <title>Hack The Box :: PlayerTwo</title>
+        <link>https://noobintheshell.com/posts/htb_playertwo/</link>
+        <pubDate>Sat, 27 Jun 2020 00:00:00 +0000</pubDate>
+        
+        <atom:modified>Sat, 27 Jun 2020 00:00:00 +0000</atom:modified>
+        <guid>https://noobintheshell.com/posts/htb_playertwo/</guid>
+        <description>PlayerTwo is an Insane Linux box created by MrR3boot and b14ckh34rt. It was released on December 14th, 2019 and was retired on June 27th, 2020. The users rated the difficulty 7.7/10 and gave the box an appreciation score of 4.4/5.
+PlayerTwo Info Card   TL;DR We start by enumerating a VHOST on port 80 that gives us access to a login page. We discover as well an API endpoint totp.</description>
+        
+        <dc:creator>noobintheshell</dc:creator>
+        <media:content url="https://noobintheshell.com/images/htb_playertwo/header.webp" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>triwp</category>
+            
+          
+            
+              <category>protobuf</category>
+            
+          
+            
+              <category>totp</category>
+            
+          
+            
+              <category>firmware_injection</category>
+            
+          
+            
+              <category>mqtt</category>
+            
+          
+            
+              <category>mosquitto</category>
+            
+          
+            
+              <category>heap</category>
+            
+          
+            
+              <category>pwn</category>
+            
+          
+            
+              <category>tcache_poisoning</category>
+            
+          
+            
+              <category>libc2.29</category>
+            
+          
+            
+              <category>double_free</category>
+            
+          
+            
+              <category>null_byte_overflow</category>
+            
+          
+        
+        
+          
+            
+              <category>pentest</category>
+            
+          
+        
+        
+          
+            
+              <category>htb_box</category>
+            
+          
+        
+      </item>
+      
+
+    
+  </channel>
+</rss>

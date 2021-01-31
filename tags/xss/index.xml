@@ -32,7 +32,7 @@
 ForwardSlash Info Card   TL;DR We access a website defaced by a hacker group. Checking for VHOSTs, we find a backup website with a login page. We can register and log in.</description>
         
         <dc:creator>noobintheshell</dc:creator>
-        <media:content url="https://noobintheshell.comimages/htb_forwardslash/header.jpg" medium="image"><media:title type="html">featured image</media:title></media:content>
+        <media:content url="https://noobintheshell.comimages/htb_forwardslash/header.webp" medium="image"><media:title type="html">featured image</media:title></media:content>
         
         
         
