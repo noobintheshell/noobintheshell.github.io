@@ -12,7 +12,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>{year}, Some Rights Reserved - </copyright>
-    <lastBuildDate>Sat, 06 Jun 2020 14:59:17 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 06 Jun 2020 00:00:00 +0000</lastBuildDate>
     <sy:updatePeriod>daily</sy:updatePeriod>
     
         <atom:link href="https://noobintheshell.com/tags/pbkdf2/index.xml" rel="self" type="application/rss+xml" />
@@ -24,9 +24,9 @@
       <item>
         <title>Hack The Box :: Nest</title>
         <link>https://noobintheshell.com/posts/htb_nest/</link>
-        <pubDate>Sat, 06 Jun 2020 14:59:17 +0000</pubDate>
+        <pubDate>Sat, 06 Jun 2020 00:00:00 +0000</pubDate>
         
-        <atom:modified>Sat, 06 Jun 2020 14:59:17 +0000</atom:modified>
+        <atom:modified>Sat, 06 Jun 2020 00:00:00 +0000</atom:modified>
         <guid>https://noobintheshell.com/posts/htb_nest/</guid>
         <description>Nest is an Easy Windows box created by VbScrub. It was released on January 25th, 2020 and retired on June 5th, 2020. The users rated the difficulty 5.2/10 and gave an appreciation score of 4/5.
 Nest Info Card   TL;DR We access some SMB shares anonymously and retrieve an HR email template containing a temporary user password. We have more accesses with that user and can read a bunch of XML configuration files in the IT share.</description>
