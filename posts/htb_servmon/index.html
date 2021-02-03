@@ -1893,10 +1893,11 @@
 </div>
 <h3 id="ftp">FTP</h3>
 <p>Anonymous login is enabled and we can access a <code>Users</code> folder that contains the folders <code>Nadine</code> and <code>Nathan</code>. The <code>Confidential.txt</code> file in <code>Nadine</code> folder contains the following message:</p>
-<div class="box">Nathan,<br />
-I left your <strong>Passwords.txt</strong> file on your Desktop.  Please remove this once you have edited it yourself and place it back into the secure folder.<br />
-Regards<br />
-Nadine</div>
+<div class="box"><p>Nathan,</p>
+<p>I left your <strong>Passwords.txt</strong> file on your Desktop.  Please remove this once you have edited it yourself and place it back into the secure folder.</p>
+<p>Regards</p>
+<p>Nadine</p>
+</div>
 <p>And the <code>Notes to do.txt</code> in <code>Nathan</code> folder shows:</p>
 <div class="box"><ol>
 <li>Change the password for NVMS - Complete</li>
@@ -1974,17 +1975,18 @@ Gr4etN3w5w17hMySk1Pa5$</div>
 <ul>
 <li>
 <p>from its configuration file:<br />
-<div class="box">nadine@SERVMON c:\Program Files\NSClient++&gt;type nsclient.ini<br />
+<div class="box"><p>nadine@SERVMON c:\Program Files\NSClient++&gt;type nsclient.ini<br />
 [&hellip;]<br />
 ; Undocumented key<br />
-password = <strong>ew2x6SsGTxjRwXOT</strong><br />
-; Undocumented key<br />
+password = <strong>ew2x6SsGTxjRwXOT</strong></p>
+<p>; Undocumented key<br />
 allowed hosts = <strong>127.0.0.1</strong><br />
-[&hellip;]</div></p>
+[&hellip;]</p>
+</div></p>
 </li>
 <li>
 <p>by using the client binary <code>nscp.exe</code>:<br />
-<div class="box">nadine@SERVMON c:\Program Files\NSClient++&gt;nscp.exe web &ndash; password &ndash;display<br />
+<div class="box">nadine@SERVMON c:\Program Files\NSClient++&gt;nscp.exe web --password --display<br />
 Current password: <strong>ew2x6SsGTxjRwXOT</strong></div></p>
 </li>
 </ul>
@@ -2447,6 +2449,21 @@ $ nc -lnvp 1234</div>
 
     <section class="related">
     
+    
+    <h1 class="related__title">
+      <hr class="hr-dots"/>
+      <div>
+        See Also
+      </div>
+      <hr class="hr-dots"/>
+    </h1>
+    <ul class="related-ul">
+        
+        <li>
+          <a href="/posts/htb_rope/" class="related__link">Hack The Box :: Rope</a>
+        </li>
+        
+    </ul>
     
   </section>
     <div class="grow"></div>

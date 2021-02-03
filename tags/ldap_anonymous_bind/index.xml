@@ -66,6 +66,51 @@ Monteverde Info Card   TL;DR We can anonymously bind to an Active Directory to r
         
       </item>
       
+      <item>
+        <title>Hack The Box :: Resolute</title>
+        <link>https://noobintheshell.com/posts/htb_resolute/</link>
+        <pubDate>Sat, 30 May 2020 00:00:00 +0000</pubDate>
+        
+        <atom:modified>Sat, 30 May 2020 00:00:00 +0000</atom:modified>
+        <guid>https://noobintheshell.com/posts/htb_resolute/</guid>
+        <description>Resolute is a Medium Windows box created by egre55. It was released on December 7th, 2019 and retired on May 30th, 2020. The users rated the difficulty of this box 4.8/10 and gave it an appreciation score of 4.7/5.
+Resolute Info Card   TL;DR We can bind anonymously to a Windows 2016 Active Directory where we find a comment in a user object that contains the default password used when creating new users.</description>
+        
+        <dc:creator>noobintheshell</dc:creator>
+        <media:content url="https://noobintheshell.com/images/htb_resolute/header.webp" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>ldap_anonymous_bind</category>
+            
+          
+            
+              <category>powershell_transcript</category>
+            
+          
+            
+              <category>dnsplugin_dll_injection</category>
+            
+          
+        
+        
+          
+            
+              <category>pentest</category>
+            
+          
+        
+        
+          
+            
+              <category>htb_box</category>
+            
+          
+        
+      </item>
+      
 
     
   </channel>

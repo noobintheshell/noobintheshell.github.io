@@ -1864,7 +1864,7 @@ mail.php</div>
 &lt;script&gt;alert(&quot;Thanks for your visit. Will get back to you as soon as we can!&quot;);window.location=&quot;home&quot;;&lt;/script&gt;</div>
 <p>Fuzzing with a bigger dictionary unveils <code>/api/totp</code>:</p>
 <div class="box"><p>$ curl <a href="http://product.player2.htb/api/totp">http://product.player2.htb/api/totp</a><br />
-{&quot;error&quot;:&quot;<strong>Cannot GET</strong> /&quot;}</p>
+{&quot;error&quot;:&quot;<strong>Cannot GET</strong> \/&quot;}</p>
 <p>$ curl -XPOST <a href="http://product.player2.htb/api/totp">http://product.player2.htb/api/totp</a><br />
 {&quot;error&quot;:&quot;<strong>Invalid Session</strong>&quot;}</p>
 </div>
@@ -1960,7 +1960,7 @@ mail.php</div>
 <div class="box">/twirp/endpoint.service/method</div>
 <p>with the argument in the body in <em>JSON</em> format. The call that should work though, returns an error:</p>
 <div class="box"><p>$ curl -XPOST <a href="http://product.player2.htb">http://product.player2.htb</a>:8545/twirp/twirp.player2.auth.Auth/GenCreds -H 'Content-Type: application/json' -d '{&quot;count&quot; 1}'</p>
-<p><strong>{&quot;code&quot;:&quot;internal&quot;,&quot;msg&quot;:&quot;internal error&quot;,&quot;meta&quot;:{&quot;cause&quot;:&quot;Call to undefined function Google\Protobuf\Internal\bccomp()&quot;}}</strong></p>
+<p><strong>{&quot;code&quot;:&quot;internal&quot;,&quot;msg&quot;:&quot;internal error&quot;,&quot;meta&quot;:{&quot;cause&quot;:&quot;Call to undefined function Google\\Protobuf\\Internal\\bccomp()&quot;}}</strong></p>
 </div>
 <p>What worked, is to send an empty payload. Each call seems to return a couple of username/password that is each time different:</p>
 <figure >
@@ -2021,7 +2021,7 @@ jkr:Lp-+Q8umLW5*7qkc</div>
 </figure>
 <p>The message says that we can either use the code sent to the user mobile phone, or use backup codes. We remember as well that we have access to the <code>totp</code> <em>API</em> and now that we are half-logged in, we can provide our session cookie:</p>
 <div class="box"><p>$ curl <a href="http://product.player2.htb/api/totp">http://product.player2.htb/api/totp</a> -H 'Cookie: PHPSESSID=p6ifon40fk49n0o81mccdgbckh'<br />
-{&quot;error&quot;:&quot;<strong>Cannot GET</strong> /&quot;}</p>
+{&quot;error&quot;:&quot;<strong>Cannot GET</strong> \/&quot;}</p>
 <p>$ curl -XPOST <a href="http://product.player2.htb/api/totp">http://product.player2.htb/api/totp</a> -H 'Cookie: PHPSESSID=p6ifon40fk49n0o81mccdgbckh'<br />
 {&quot;error&quot;:&quot;<strong>Invalid action</strong>&quot;}</p>
 </div>
@@ -3024,7 +3024,7 @@ delete_config(4)</div>
 </figure>
 <hr />
 <h2 id="conclusion">Conclusion</h2>
-<p>As I already said in my <a href="https://medium.com/@noobintheshell/htb-rope-6e06c00f07b8#b173">Rope</a> write-up, this box was amazing and in my top 3 preferred boxes so far! Those boxes that push you to “go back to school” and learn new things on the fly are what make Hack The Box so enjoyable.</p>
+<p>As I already said in my <a href="https://noobintheshell.com/posts/htb_rope/">Rope</a> write-up, this box was amazing and in my top 3 preferred boxes so far! Those boxes that push you to “go back to school” and learn new things on the fly are what make Hack The Box so enjoyable.</p>
 <p>I am not an expert in heap exploitation and to be honest, this was the first time for me. There are certainly many other ways to exploit it, maybe more straightforward, like not using tcache at all. I am looking forward to reading other write-ups to better understand what else is feasible as I haven't grasped all the subtleties of heap exploitation yet. Great job from the 2 creators!</p>
 <hr />
 <h2 id="resources">Resources</h2>
@@ -3402,6 +3402,21 @@ delete_config(4)</div>
 
     <section class="related">
     
+    
+    <h1 class="related__title">
+      <hr class="hr-dots"/>
+      <div>
+        See Also
+      </div>
+      <hr class="hr-dots"/>
+    </h1>
+    <ul class="related-ul">
+        
+        <li>
+          <a href="/posts/htb_patents/" class="related__link">Hack The Box :: Patents</a>
+        </li>
+        
+    </ul>
     
   </section>
     <div class="grow"></div>
