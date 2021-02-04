@@ -86,6 +86,55 @@ Patents Info Card   TL;DR We have access to a website that manages patents. The 
         
       </item>
       
+      <item>
+        <title>Hack The Box :: Obscurity</title>
+        <link>https://noobintheshell.com/posts/htb_obscurity/</link>
+        <pubDate>Sat, 09 May 2020 00:00:00 +0000</pubDate>
+        
+        <atom:modified>Sat, 09 May 2020 00:00:00 +0000</atom:modified>
+        <guid>https://noobintheshell.com/posts/htb_obscurity/</guid>
+        <description>Obscurity is a Medium Linux box created by clubby789. It was released on November 30th, 2019 and retired on May 9th, 2020. The users rated the difficulty 4.8/10 and gave an overall score of 4/5 to the box.
+Obscurity Info Card   TL;DR We discover the Python source code of the custom web server in a hidden folder of the website it hosts. After analysis, we find out that the server is vulnerable to RCE through the URI.</description>
+        
+        <dc:creator>noobintheshell</dc:creator>
+        <media:content url="https://noobintheshell.com/images/htb_obscurity/header.webp" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>custom_httpd</category>
+            
+          
+            
+              <category>custom_encryption</category>
+            
+          
+            
+              <category>custom_sshd</category>
+            
+          
+            
+              <category>rce</category>
+            
+          
+        
+        
+          
+            
+              <category>pentest</category>
+            
+          
+        
+        
+          
+            
+              <category>htb_box</category>
+            
+          
+        
+      </item>
+      
 
     
   </channel>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" 
+  xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+  xmlns:dc="http://purl.org/dc/elements/1.1/" 
+  xmlns:atom="http://www.w3.org/2005/Atom" 
+  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
+  xmlns:media="http://search.yahoo.com/mrss/">
+  <channel>
+    <title>custom_httpd on noobintheshell :: blog</title>
+    <link>https://noobintheshell.com/tags/custom_httpd/</link>
+    <description>Recent content in custom_httpd on noobintheshell :: blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>{year}, Some Rights Reserved - </copyright>
+    <lastBuildDate>Sat, 09 May 2020 00:00:00 +0000</lastBuildDate>
+    <sy:updatePeriod>daily</sy:updatePeriod>
+    
+        <atom:link href="https://noobintheshell.com/tags/custom_httpd/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+
+      
+      <item>
+        <title>Hack The Box :: Obscurity</title>
+        <link>https://noobintheshell.com/posts/htb_obscurity/</link>
+        <pubDate>Sat, 09 May 2020 00:00:00 +0000</pubDate>
+        
+        <atom:modified>Sat, 09 May 2020 00:00:00 +0000</atom:modified>
+        <guid>https://noobintheshell.com/posts/htb_obscurity/</guid>
+        <description>Obscurity is a Medium Linux box created by clubby789. It was released on November 30th, 2019 and retired on May 9th, 2020. The users rated the difficulty 4.8/10 and gave an overall score of 4/5 to the box.
+Obscurity Info Card   TL;DR We discover the Python source code of the custom web server in a hidden folder of the website it hosts. After analysis, we find out that the server is vulnerable to RCE through the URI.</description>
+        
+        <dc:creator>noobintheshell</dc:creator>
+        <media:content url="https://noobintheshell.com/images/htb_obscurity/header.webp" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>custom_httpd</category>
+            
+          
+            
+              <category>custom_encryption</category>
+            
+          
+            
+              <category>custom_sshd</category>
+            
+          
+            
+              <category>rce</category>
+            
+          
+        
+        
+          
+            
+              <category>pentest</category>
+            
+          
+        
+        
+          
+            
+              <category>htb_box</category>
+            
+          
+        
+      </item>
+      
+
+    
+  </channel>
+</rss>

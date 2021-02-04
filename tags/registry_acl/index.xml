@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" 
+  xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+  xmlns:dc="http://purl.org/dc/elements/1.1/" 
+  xmlns:atom="http://www.w3.org/2005/Atom" 
+  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
+  xmlns:media="http://search.yahoo.com/mrss/">
+  <channel>
+    <title>registry_acl on noobintheshell :: blog</title>
+    <link>https://noobintheshell.com/tags/registry_acl/</link>
+    <description>Recent content in registry_acl on noobintheshell :: blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>{year}, Some Rights Reserved - </copyright>
+    <lastBuildDate>Sat, 25 Apr 2020 00:00:00 +0000</lastBuildDate>
+    <sy:updatePeriod>daily</sy:updatePeriod>
+    
+        <atom:link href="https://noobintheshell.com/tags/registry_acl/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+
+      
+      <item>
+        <title>Hack The Box :: Control</title>
+        <link>https://noobintheshell.com/posts/htb_control/</link>
+        <pubDate>Sat, 25 Apr 2020 00:00:00 +0000</pubDate>
+        
+        <atom:modified>Sat, 25 Apr 2020 00:00:00 +0000</atom:modified>
+        <guid>https://noobintheshell.com/posts/htb_control/</guid>
+        <description>Control is a Hard Windows box created by TRX. It was released on November 23rd, 2019 and was retired on April 25th, 2020. The users rated the difficulty 6.4/10 and gave an overall score of 4.5/5 to this box.
+Control Info Card   TL;DR The admin portal of a website is not protected and is supposed to be accessed only through a proxy. This is bypassed using the X-Forwarded-For HTTP header.</description>
+        
+        <dc:creator>noobintheshell</dc:creator>
+        <media:content url="https://noobintheshell.com/images/htb_control/header.webp" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>x-forwarded-for</category>
+            
+          
+            
+              <category>sqli</category>
+            
+          
+            
+              <category>registry_acl</category>
+            
+          
+        
+        
+          
+            
+              <category>pentest</category>
+            
+          
+        
+        
+          
+            
+              <category>htb_box</category>
+            
+          
+        
+      </item>
+      
+
+    
+  </channel>
+</rss>

@@ -318,6 +318,61 @@
   </url>
   
   <url>
+    <loc>https://noobintheshell.com/tags/custom_encryption/</loc>
+    <lastmod>2020-05-09T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://noobintheshell.com/tags/custom_httpd/</loc>
+    <lastmod>2020-05-09T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://noobintheshell.com/tags/custom_sshd/</loc>
+    <lastmod>2020-05-09T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://noobintheshell.com/posts/htb_obscurity/</loc>
+    <lastmod>2020-05-09T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://noobintheshell.com/posts/htb_openadmin/</loc>
+    <lastmod>2020-05-02T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://noobintheshell.com/tags/nano/</loc>
+    <lastmod>2020-05-02T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://noobintheshell.com/tags/opennetadmin/</loc>
+    <lastmod>2020-05-02T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://noobintheshell.com/posts/htb_control/</loc>
+    <lastmod>2020-04-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://noobintheshell.com/tags/registry_acl/</loc>
+    <lastmod>2020-04-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://noobintheshell.com/tags/sqli/</loc>
+    <lastmod>2020-04-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://noobintheshell.com/tags/x-forwarded-for/</loc>
+    <lastmod>2020-04-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://noobintheshell.com/archive/</loc>
     <lastmod>2019-10-19T11:44:14+09:00</lastmod>
   </url>
