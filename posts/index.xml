@@ -12,7 +12,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>{year}, Some Rights Reserved - </copyright>
-    <lastBuildDate>Tue, 12 Jan 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 20 Feb 2021 00:00:00 +0000</lastBuildDate>
     <sy:updatePeriod>daily</sy:updatePeriod>
     
         <atom:link href="https://noobintheshell.com/posts/index.xml" rel="self" type="application/rss+xml" />
@@ -20,6 +20,67 @@
     
     
 
+      
+      <item>
+        <title>MacAfee ATR CTF 2021</title>
+        <link>https://noobintheshell.com/posts/mcafee_ctf_2021/</link>
+        <pubDate>Sat, 20 Feb 2021 00:00:00 +0000</pubDate>
+        
+        <atom:modified>Sat, 20 Feb 2021 00:00:00 +0000</atom:modified>
+        <guid>https://noobintheshell.com/posts/mcafee_ctf_2021/</guid>
+        <description>This was the first CTF organized by McAfee Advanced Threat Research Team. It was held from February 5th, 2021 to February 18th, 2021 and was initially made for their internal employees.
+I was able to complete all but one challenge (the crypto One Time Only!) and finished at the 9th place:
+scoreboard   Here is my write-up&amp;hellip;
+WEB 100 - A DNS query to rule them all! The web server that hosts this webpage has a flag on it.</description>
+        
+        <dc:creator>noobintheshell</dc:creator>
+        <media:content url="https://noobintheshell.comimages/mcafee_ctf_2021/header.webp" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>cmd_injection</category>
+            
+          
+            
+              <category>apk</category>
+            
+          
+            
+              <category>heap</category>
+            
+          
+            
+              <category>shellcode</category>
+            
+          
+            
+              <category>squashfs</category>
+            
+          
+            
+              <category>ham</category>
+            
+          
+            
+              <category>sstv</category>
+            
+          
+            
+              <category>aes-cbc</category>
+            
+          
+        
+        
+          
+            
+              <category>ctf</category>
+            
+          
+        
+        
+      </item>
       
       <item>
         <title>KringleCon 3: Three French Hens</title>

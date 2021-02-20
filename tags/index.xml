@@ -12,7 +12,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>{year}, Some Rights Reserved - </copyright>
-    <lastBuildDate>Tue, 12 Jan 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 20 Feb 2021 00:00:00 +0000</lastBuildDate>
     <sy:updatePeriod>daily</sy:updatePeriod>
     
         <atom:link href="https://noobintheshell.com/tags/index.xml" rel="self" type="application/rss+xml" />
@@ -20,6 +20,150 @@
     
     
 
+      
+      <item>
+        <title>aes-cbc</title>
+        <link>https://noobintheshell.com/tags/aes-cbc/</link>
+        <pubDate>Sat, 20 Feb 2021 00:00:00 +0000</pubDate>
+        
+        
+        <guid>https://noobintheshell.com/tags/aes-cbc/</guid>
+        <description></description>
+        
+        
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>apk</title>
+        <link>https://noobintheshell.com/tags/apk/</link>
+        <pubDate>Sat, 20 Feb 2021 00:00:00 +0000</pubDate>
+        
+        
+        <guid>https://noobintheshell.com/tags/apk/</guid>
+        <description></description>
+        
+        
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>cmd_injection</title>
+        <link>https://noobintheshell.com/tags/cmd_injection/</link>
+        <pubDate>Sat, 20 Feb 2021 00:00:00 +0000</pubDate>
+        
+        
+        <guid>https://noobintheshell.com/tags/cmd_injection/</guid>
+        <description></description>
+        
+        
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>ham</title>
+        <link>https://noobintheshell.com/tags/ham/</link>
+        <pubDate>Sat, 20 Feb 2021 00:00:00 +0000</pubDate>
+        
+        
+        <guid>https://noobintheshell.com/tags/ham/</guid>
+        <description></description>
+        
+        
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>heap</title>
+        <link>https://noobintheshell.com/tags/heap/</link>
+        <pubDate>Sat, 20 Feb 2021 00:00:00 +0000</pubDate>
+        
+        
+        <guid>https://noobintheshell.com/tags/heap/</guid>
+        <description></description>
+        
+        
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>shellcode</title>
+        <link>https://noobintheshell.com/tags/shellcode/</link>
+        <pubDate>Sat, 20 Feb 2021 00:00:00 +0000</pubDate>
+        
+        
+        <guid>https://noobintheshell.com/tags/shellcode/</guid>
+        <description></description>
+        
+        
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>squashfs</title>
+        <link>https://noobintheshell.com/tags/squashfs/</link>
+        <pubDate>Sat, 20 Feb 2021 00:00:00 +0000</pubDate>
+        
+        
+        <guid>https://noobintheshell.com/tags/squashfs/</guid>
+        <description></description>
+        
+        
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>sstv</title>
+        <link>https://noobintheshell.com/tags/sstv/</link>
+        <pubDate>Sat, 20 Feb 2021 00:00:00 +0000</pubDate>
+        
+        
+        <guid>https://noobintheshell.com/tags/sstv/</guid>
+        <description></description>
+        
+        
+        
+        
+        
+        
+        
+        
+      </item>
       
       <item>
         <title>holidayhack</title>
@@ -244,24 +388,6 @@
         
         
         <guid>https://noobintheshell.com/tags/firmware_injection/</guid>
-        <description></description>
-        
-        
-        
-        
-        
-        
-        
-        
-      </item>
-      
-      <item>
-        <title>heap</title>
-        <link>https://noobintheshell.com/tags/heap/</link>
-        <pubDate>Sat, 27 Jun 2020 00:00:00 +0000</pubDate>
-        
-        
-        <guid>https://noobintheshell.com/tags/heap/</guid>
         <description></description>
         
         
@@ -532,24 +658,6 @@
         
         
         <guid>https://noobintheshell.com/tags/ads/</guid>
-        <description></description>
-        
-        
-        
-        
-        
-        
-        
-        
-      </item>
-      
-      <item>
-        <title>aes-cbc</title>
-        <link>https://noobintheshell.com/tags/aes-cbc/</link>
-        <pubDate>Sat, 06 Jun 2020 00:00:00 +0000</pubDate>
-        
-        
-        <guid>https://noobintheshell.com/tags/aes-cbc/</guid>
         <description></description>
         
         
