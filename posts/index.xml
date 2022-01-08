@@ -12,7 +12,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>{year}, Some Rights Reserved - </copyright>
-    <lastBuildDate>Sat, 20 Feb 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 07 Jan 2022 00:00:00 +0000</lastBuildDate>
     <sy:updatePeriod>daily</sy:updatePeriod>
     
         <atom:link href="https://noobintheshell.com/posts/index.xml" rel="self" type="application/rss+xml" />
@@ -20,6 +20,46 @@
     
     
 
+      
+      <item>
+        <title>KringleCon 4: Calling Birds</title>
+        <link>https://noobintheshell.com/posts/kringlecon4/</link>
+        <pubDate>Fri, 07 Jan 2022 00:00:00 +0000</pubDate>
+        
+        <atom:modified>Fri, 07 Jan 2022 00:00:00 +0000</atom:modified>
+        <guid>https://noobintheshell.com/posts/kringlecon4/</guid>
+        <description>The SANS Holiday Hack Challenge is back! And with it, the fourth edition of KringleCon and Jack Frost! The fourth edition of Kringlecon was a blast! This year challenges were covering webapp hacking (SQLi, SSRF, business logic issues), binary analysis, digital forensics (logs and network capture analysis), Active Directory attacks, learning Python and shellcoding, some encryption attack, analyzing an IMDS service and FPGA programming. Two challenges on Log4Shell were added as well during the challenge.</description>
+        
+        <dc:creator>noobintheshell</dc:creator>
+        <media:content url="https://noobintheshell.comimages/kringlecon4/header.webp" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>kringlecon</category>
+            
+          
+            
+              <category>holidayhack</category>
+            
+          
+        
+        
+          
+            
+              <category>ctf</category>
+            
+          
+        
+        
+          
+            
+              <category>holidayhack</category>
+            
+          
+        
+      </item>
       
       <item>
         <title>MacAfee ATR CTF 2021</title>
