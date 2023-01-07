@@ -12,7 +12,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>{year}, Some Rights Reserved - </copyright>
-    <lastBuildDate>Sat, 08 Jan 2022 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 07 Jan 2023 00:00:00 +0000</lastBuildDate>
     <sy:updatePeriod>daily</sy:updatePeriod>
     
         <atom:link href="https://noobintheshell.com/tags/holidayhack/index.xml" rel="self" type="application/rss+xml" />
@@ -20,6 +20,46 @@
     
     
 
+      
+      <item>
+        <title>KringleCon 5: Golden Rings</title>
+        <link>https://noobintheshell.com/posts/kringlecon5/</link>
+        <pubDate>Sat, 07 Jan 2023 00:00:00 +0000</pubDate>
+        
+        <atom:modified>Sat, 07 Jan 2023 00:00:00 +0000</atom:modified>
+        <guid>https://noobintheshell.com/posts/kringlecon5/</guid>
+        <description>The SANS Holiday Hack Challenge is back! And with it, the long awaited fifth edition of KringleCon! This year challenges were covering logs and PCAP analysis, CI/CD vulnerabilities, a container escape, webapp hacking (XXE, CSP bypass), an introduction to AWS CLI for cloud discovery and an introduction to smart contracts. KringleCon is as well an online security conference and you can find all the talks on KringleCon’s Youtube channel. The same Discord channel as last year was available to interact with the community.</description>
+        
+        <dc:creator>noobintheshell</dc:creator>
+        <media:content url="https://noobintheshell.comimages/kringlecon5/header.webp" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>kringlecon</category>
+            
+          
+            
+              <category>holidayhack</category>
+            
+          
+        
+        
+          
+            
+              <category>ctf</category>
+            
+          
+        
+        
+          
+            
+              <category>holidayhack</category>
+            
+          
+        
+      </item>
       
       <item>
         <title>KringleCon 4: Calling Birds</title>
